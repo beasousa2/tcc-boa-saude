@@ -1,0 +1,27 @@
+INSERT INTO ASSOCIADO(nome,data_nascimento,cpf,rg,orgao_emissor,data_emissao,matricula,telefone,email,estado_civil,genero,situacao,descricao,odontologico,enfermaria,apartamento,preco_mensalidade,logradouro,cep,complemento,numero,bairro,cidade,uf)
+VALUES (
+  'Ryan Jorge Castro',
+  '2002-05-06',
+  '48878566012',
+  '260796657',
+  'PC',
+  '2010-09-11',
+  '88454887852369-12',
+  '(88) 98244-8207',
+  'ryan.jorge.castro@gmail.com',
+  'SOLTEIRO',
+  'MASCULINO',
+  'ATIVO',
+  'plano com apartamento',
+  'true',
+  'true',
+  'true',
+  189.90,
+  'Vila Lacerda, s/n',
+  '63820-974',
+  's/n',
+  '679',
+  'Centro',
+  'Lacerda',
+  'CE'
+);

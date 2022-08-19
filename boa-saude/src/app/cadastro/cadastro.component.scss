@@ -1,0 +1,15 @@
+#titulos {
+  margin-bottom: var(--fontelinha-l);
+  &:first-child {
+    margin-bottom: var(--fontelinha-m);
+  }
+}
+
+#cadastro {
+  height: 150vh;
+  margin-top: var(--l);
+
+  #submit {
+    width: 360px;
+  }
+}

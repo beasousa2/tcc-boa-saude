@@ -1,0 +1,70 @@
+.main {
+  margin: 64px 122px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  //LOGIN
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+
+    //TITULOS
+    .titulos {
+      padding-bottom: var(--fontelinha-3xl);
+      h1 {
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: var(--fontelinha-s);
+      }
+      p {
+        font-weight: 300;
+        text-align: center;
+      }
+    }
+
+    //FORM
+    .form {
+      width: 100%;
+
+      .inputs {
+        padding-bottom: 2rem;
+      }
+    }
+
+    //SENHA
+    .senha {
+      padding: 8px 0 32px;
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      a {
+        font-size: var(--fonte-s);
+        &:first-child {
+          color: var(--preto);
+          font-weight: 300;
+        }
+        &:last-child {
+          text-decoration: none;
+          font-weight: bold;
+          color: var(--azul-500);
+        }
+      }
+    }
+
+    //CONTA
+    .conta {
+      p {
+        font-size: var(--fonte-m);
+        font-weight: 300;
+      }
+      a {
+        text-decoration: none;
+        color: var(--azul-500);
+        font-weight: bold;
+      }
+    }
+  }
+}

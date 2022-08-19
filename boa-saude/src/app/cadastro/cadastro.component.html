@@ -1,0 +1,164 @@
+<app-header></app-header>
+
+<div class="bs-container" id="cadastro">
+  <div id="titulos">
+    <p class="fonte-l" >Cadastro de Associado</p>
+    <p class="fonte-m laranja-800">Plano Individual Apartamento II</p>
+  </div>
+  <div id="forms">
+    <form [formGroup]="cadastroAssociado" (submit)="register()">
+      <div id="dados-pessoais" class="bs-m-b-2xl" >
+        <p class="fonte-m">Dados Pessoais</p>
+        <div class="bs-row bs-col-3">
+          <app-inputs
+            label="Seu nome"
+            placeholder="nome completo"
+            icon="bi bi-person"
+            inputType="text"
+            formControlName="nomeCompleto"
+            [control]="cadastroAssociado.get('nomeCompleto')"></app-inputs>
+          <app-inputs
+            label="Seu data de nascimento"
+            placeholder="dd/mm/aaaa"
+            icon="bi bi-calendar"
+            inputType="date"
+            formControlName="dataNascimento"
+            [control]="cadastroAssociado.get('dataNascimento')"></app-inputs>
+          <app-inputs
+            label="Seu cpf"
+            placeholder="somente números"
+            icon="bi bi-person"
+            inputType="text"
+            formControlName="cpf"
+            [control]="cadastroAssociado.get('cpf')"
+            ></app-inputs>
+          <app-inputs
+            label="Seu rg"
+            placeholder="somente números"
+            icon="bi bi-person"
+            inputType="text"
+            formControlName="rg"
+            [control]="cadastroAssociado.get('rg')"></app-inputs>
+          <app-inputs
+            label="Data de emissão"
+            placeholder="dd/mm/aaaa"
+            icon="bi bi-calendar"
+            inputType="date"
+            formControlName="dataEmissao"
+            [control]="cadastroAssociado.get('dataEmissao')"></app-inputs>
+          <app-inputs
+            label="Órgão emissor"
+            placeholder="selecione"
+            icon="bi bi-person"
+            inputType="text"
+            formControlName="orgaoEmissor"
+            [control]="cadastroAssociado.get('orgaoEmissor')"></app-inputs>
+          <app-inputs
+            label="Seu gênero"
+            placeholder="selecione"
+            icon="bi bi-gender-ambiguous"
+            inputType="text"
+            formControlName="genero"
+            [control]="cadastroAssociado.get('genero')"></app-inputs>
+          <app-inputs
+            label="Seu estado civil"
+            placeholder="selecione"
+            icon="bi bi-person"
+            inputType="text"
+            formControlName="estadoCivil"
+            [control]="cadastroAssociado.get('estadoCivil')"></app-inputs>
+            <app-select></app-select>
+        </div>
+      </div>
+      <div id="endereco" class="bs-m-b-2xl" >
+        <p class="fonte-m">Endereço</p>
+        <div class="bs-row bs-col-3 ">
+          <app-inputs
+            label="Seu cep"
+            placeholder="somente números"
+            icon="bi bi-geo-alt"
+            inputType="text"
+            formControlName="cep"
+            [control]="cadastroAssociado.get('cep')"></app-inputs>
+          <app-inputs
+            label="Seu endereço"
+            placeholder="Rua, TV. Avenida"
+            icon="bi bi-geo-alt"
+            inputType="text"
+            formControlName="endereco"
+            [control]="cadastroAssociado.get('endereco')"></app-inputs>
+          <app-inputs
+            label="Número"
+            placeholder="00"
+            icon="bi bi-geo-alt"
+            inputType="text"
+            formControlName="numero"
+            [control]="cadastroAssociado.get('numero')"></app-inputs>
+          <app-inputs
+            label="Complemento"
+            placeholder="complemento"
+            icon="bi bi-geo-alt"
+            inputType="text"
+            formControlName="complemento"
+            [control]="cadastroAssociado.get('complemento')"></app-inputs>
+          <app-inputs
+            label="Seu bairro"
+            placeholder="bairro"
+            icon="bi bi-geo-alt"
+            inputType="text"
+            formControlName="bairro"
+            [control]="cadastroAssociado.get('bairro')"></app-inputs>
+          <app-inputs
+            label="Sua cidade"
+            placeholder="cidade"
+            icon="bi bi-geo-alt"
+            inputType="text"
+            formControlName="cidade"
+            [control]="cadastroAssociado.get('cidade')"></app-inputs>
+          <app-inputs
+          label="UF"
+          placeholder="selecione"
+          icon="bi bi-geo-alt"
+          inputType="text"
+          formControlName="uf"
+          [control]="cadastroAssociado.get('uf')"></app-inputs>
+        </div>
+      </div>
+      <div id="contato" class="bs-m-b-2xl">
+        <p class="fonte-m">Contato</p>
+        <div class="bs-row bs-col-3">
+          <app-inputs
+            label="Seu telefone"
+            placeholder="(xx) 91234-5678"
+            icon="bi bi-telephone"
+            inputType="text"
+            formControlName="telefone"
+            [control]="cadastroAssociado.get('telefone')"></app-inputs>
+          <app-inputs
+            label="Seu melhor e-mail"
+            placeholder="nome@exemple.com"
+            icon="bi bi-envelope"
+            inputType="email"
+            formControlName="email"
+            [control]="cadastroAssociado.get('email')"></app-inputs>
+          <app-inputs
+            label="Confirme seu e-mail"
+            placeholder="nome@exemple.com"
+            icon="bi bi-envelope"
+            inputType="email"
+            formControlName="confirmarEmail"
+            [control]="cadastroAssociado.get('confirmarEmail')"></app-inputs>
+        </div>
+      </div>
+      <div id="termos">
+        <input type="checkbox" name="termos" id="">
+        <p>Confirmo que Li e Aceito o contrato e termos de uso </p>
+      </div>
+      <div id="submit">
+        <button type="submit" class="bs-btn bs-btn-lg-primary" >Confirmar cadastro</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>

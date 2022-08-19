@@ -1,0 +1,256 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$BoaSaude-primary: mat.define-palette(mat.$indigo-palette);
+$BoaSaude-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$BoaSaude-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$BoaSaude-theme: mat.define-light-theme((
+  color: (
+    primary: $BoaSaude-primary,
+    accent: $BoaSaude-accent,
+    warn: $BoaSaude-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($BoaSaude-theme);
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@700&family=Montserrat:wght@100;200;300;400;700&display=swap');
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+//VARIÁVEIS
+:root {
+  --logo: #000B5E;
+
+  --azul-900: #001be5;
+  --azul-500: #3437FF;
+  --azul-400: #6656FF;
+  --azul-300: #8975FF;
+  --azul-200: #AF9EFE;
+  --azul-100: #D0C5FE;
+  --azul-50: #EDE7FF;
+
+  --laranja-900: #FC7A30;
+  --laranja-800: #FF9734;
+  --laranja-50: #FFF8E4;
+
+  --preto-900: #232326;
+  --preto-800: #444447;
+  --preto-700: #636366;
+  --preto-600: #77777B;
+  --preto-500: #A0A0A4;
+  --preto-400: #BFBFC3;
+  --preto-300: #E2E2E6;
+  --preto-100: #F5F5F9;
+  --preto-50: #FAFAFE;
+  --preto-9: #F9F9F9;
+  --preto-FA: #FAFAFA;
+  --preto-0: #FFFFFF;
+
+  --vermelho-400: #FF4848;
+  --verde-500: #17B51C;
+
+  // Fonte
+  --fonte-xss: 10px;
+  --fonte-xs: 12px;
+  --fonte-s: 14px;
+  --fonte-m: 16px;
+  --fonte-l: 24px;
+  --fonte-xl: 32px;
+
+  //Espaçamentos
+  --fontelinha-s: 8px;
+  --fontelinha-m: 16px;
+  --fontelinha-l: 24px;
+  --fontelinha-xl: 32px;
+  --fontelinha-2xl: 40px;
+  --fontelinha-3xl: 48px;
+
+  //Margens
+  --mobile: 16px;
+  --tablet: 24px;
+  --desktop: 24px;
+
+  --xss: 8px
+  --xs: 12px;
+  --s: 14px;
+  --m: 16px;
+  --l: 24px;
+  --xl: 36px;
+  --2xl: 40px;
+  --3xl: 48px;
+}
+
+//RESET
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Montserrat', sans-serif;
+  color: var(--preto-800);
+
+}
+
+html {
+  background: var(--preto-0);
+}
+
+html, body { min-height: 100%;}
+
+//THEME
+.preto-0 { color: var(--preto-0); }
+
+.azul-500 { color: var(--azul-500); }
+
+.verde-500 { color: var(--verde-500); }
+
+.vermelho-400 { color: var(--vermelho-400); }
+
+.laranja-800 { color: var(--laranja-800); }
+.laranja-50 { color: var(--laranja-50); }
+.laranja-900 { color: var(--laranja-900); }
+
+.bs-btn {
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bs-btn-lg-primary {
+  width: 100%;
+  background: var(--azul-500);
+  color: var(--preto-0);
+  font-size: var(--fonte-m);
+
+  &:hover {
+    border-color: var(--azul-900);
+    background: var(--azul-900);
+    box-shadow: 0 0 0 0.25rem rgba(52, 55, 255, .5);;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  }
+}
+
+//LAYOUT
+
+.bs-container {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.bs-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.bs-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bs-m-t-lg {
+  margin-top: var(--l);
+}
+
+.bs-m-b-lg {
+  margin-bottom: var(--l);
+}
+
+.bs-m-b-2xl {
+  margin-bottom: var(--2xl);
+}
+
+
+@media (min-width: 576px) {
+  .bs-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bs-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bs-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bs-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .bs-container {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .bs-container {
+    max-width: 1460px;
+    max-height: 100%;
+  }
+}
+
+.fonte-xss{ font-size: var(--fonte-xss);}
+.fonte-xs{ font-size: var(--fonte-xs);}
+.fonte-s{ font-size: var(--fonte-s);}
+.fonte-m{ font-size: var(--fonte-m);}
+.fonte-l{ font-size: var(--fonte-l);}
+.fonte-xl{ font-size: var(--fonte-xl);}
+
+.fontelinha-s {line-height: var(--fontelinha-s);}
+.fontelinha-m {line-height: var(--fontelinha-m);}
+.fontelinha-l {line-height: var(--fontelinha-l);}
+.fontelinha-xl {line-height: var(--fontelinha-xl);}
+.fontelinha-2xl {line-height: var(--fontelinha-2xl);}
+.fontelinha-3xl {line-height: var(--fontelinha-3xl);}
+
+.w-100 {font-weight: 100;}
+.w-200 {font-weight: 200;}
+.w-300 {font-weight: 300;}
+.w-400 {font-weight: 400;}
+.w-700 {font-weight: 700;}
+
+.montserrat { font-family: 'Montserrat';}
+.farro { font-family: 'Farro';}
+
+.bs-link { text-decoration: none; cursor: pointer;}
+.sublinhado { text-decoration: line-through; color: var(--preto-400)}
+
+
+
+
+

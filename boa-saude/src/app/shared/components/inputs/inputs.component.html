@@ -1,0 +1,12 @@
+<div class="form-group1">
+  <label> {{label}} </label>
+  <div class="input-group1">
+    <i class="{{icon}}" ></i>
+    <input
+    [type]="inputType"
+    placeholder="{{placeholder}}"
+    [(ngModel)]="value"
+    (blur)="onTouched()">
+  </div>
+  <app-messages [control]="control" message="{{ label }}"></app-messages>
+</div>

@@ -1,0 +1,43 @@
+.footer {
+  height: 90px;
+  width: 100%;
+  background: var(--logo);
+  position: fixed;
+  bottom: 0;
+
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px 270px;
+
+  .redes-sociais {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   .direitos {
+    p {
+      color: var(--preto-0);
+    }
+   }
+
+   .links {
+
+    ul {
+      justify-content: space-between;
+      li {
+        display: inline;
+        padding: 0 .75rem;
+        cursor: pointer;
+      }
+    }
+   }
+  }
+
+  .endereco {
+    p {
+      color: var(--preto-0);
+    }
+  }
+
+}
