@@ -22,7 +22,7 @@ public class AssociadoController {
     @PostMapping
     public ResponseEntity<AssociadoDto> criarAssociado(@RequestBody @Valid CriarAssociadoForm form) {
         AssociadoDto dto = form.formToDto();
-        associadoPort.execute(dto);
+        associadoPort.execute(form);
         return ResponseEntity.ok().build();
     }
 }

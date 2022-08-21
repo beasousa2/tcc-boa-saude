@@ -1,30 +1,34 @@
 {
-    "namespace": "br.com.boasaude.associado.criar_associado_novo_realizada",
+    "namespace": "br.com.boasaude.associado.apirest.criar_associado_novo_realizada",
     "type": "record",
     "name": "CriaAssociadoNovoRealizada",
     "fields": [
-        {"name":  "data",
+        {
+            "name":  "data",
             "type": {
-                "type": "record",
                 "name": "CriarAssociadoNovoRealizadaData",
+                "type": "record",
                 "fields":[
-                    {"name": "InformacoesPessoais",
-                     "type": {
-                        "type": "record",
+                    {
                         "name": "InformacoesPessoais",
-                        "fields": [
-                            {"name": "nome_completo", "type": ["null", "string"], "default": null},
-                            {"name": "data_nascimento", "type": ["null", "string"], "default": null},
-                            {"name": "cpf", "type": ["null", "string"], "default": null},
-                            {"name": "rg", "type": ["null", "string"], "default": null},
-                            {"name": "orgao_emissor", "type": ["null", "string"], "default": null},
-                            {"name": "data_emissao", "type": ["null", "string"], "default": null},
-                            {"name": "telefone", "type": ["null", "string"], "default": null},
-                            {"name": "email", "type": ["null", "string"], "default": null},
-                            {"name": "estado_civil", "type": ["null", "string"], "default": null},
-                            {"name": "genero", "type": ["null", "string"], "default": null},
-                            {"name": "situacao", "type": ["null", "string"], "default": null}
-                        ]}
+                        "type":
+                        {
+                            "type": "record",
+                            "name": "InformacoesPessoais",
+                            "fields": [
+                                {"name": "nome_completo", "type": ["null", "string"], "default": null},
+                                {"name": "data_nascimento", "type": ["null", "string"], "default": null},
+                                {"name": "cpf", "type": ["null", "string"], "default": null},
+                                {"name": "rg", "type": ["null", "string"], "default": null},
+                                {"name": "orgao_emissor", "type": ["null", "string"], "default": null},
+                                {"name": "data_emissao", "type": ["null", "string"], "default": null},
+                                {"name": "telefone", "type": ["null", "string"], "default": null},
+                                {"name": "email", "type": ["null", "string"], "default": null},
+                                {"name": "estado_civil", "type": ["null", "string"], "default": null},
+                                {"name": "genero", "type": ["null", "string"], "default": null},
+                                {"name": "situacao", "type": ["null", "string"], "default": null}
+                            ]
+                        }
                     },
                     {"name": "Endereco", "type":
                     {

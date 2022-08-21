@@ -1,12 +1,13 @@
 package br.com.boasaude.associado.microservicecore.adapters.kafka.converts;
 
-import br.com.boasaude.associado.criar_associado_novo_realizada.CriaAssociadoNovoRealizada;
+import br.com.boasaude.associado.apirest.criar_associado_novo_realizada.CriaAssociadoNovoRealizada;
 import br.com.boasaude.associado.microservicecore.dto.AssociadoDto;
+import br.com.boasaude.associado.microservicecore.dto.EnderecoDto;
+import br.com.boasaude.associado.microservicecore.dto.PlanoDto;
 import br.com.boasaude.associado.microservicecore.enums.EstadoCivil;
 import br.com.boasaude.associado.microservicecore.enums.Genero;
 import br.com.boasaude.associado.microservicecore.enums.Situacao;
 import br.com.boasaude.associado.microservicecore.utils.GerarMatricula;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -30,18 +31,22 @@ public class CriarNovoAssociadoConverter {
                 .situacao(Situacao.valueOf(avro.getData().getInformacoesPessoais().getSituacao().toString()))
                 .estadoCivil(EstadoCivil.valueOf(avro.getData().getInformacoesPessoais().getEstadoCivil().toString()))
                 .genero(Genero.valueOf(avro.getData().getInformacoesPessoais().getGenero().toString()))
-                .logradouro(avro.getData().getEndereco().getLogradouro().toString())
-                .cep(avro.getData().getEndereco().getCep().toString())
-                .numero(avro.getData().getEndereco().getNumero().toString())
-                .complemento(avro.getData().getEndereco().getComplemento().toString())
-                .bairro(avro.getData().getEndereco().getBairro().toString())
-                .cidade(avro.getData().getEndereco().getCidade().toString())
-                .uf(avro.getData().getEndereco().getUf().toString())
-                .descricao(avro.getData().getPlano().getDescricao().toString())
-                .apartamento(avro.getData().getPlano().getApartamento())
-                .enfermaria(avro.getData().getPlano().getEnfermaria())
-                .odontologico(avro.getData().getPlano().getOdontologico())
-                .precoMensalidade(BigDecimal.valueOf(avro.getData().getPlano().getPrecoMensalidade()))
+                .planoDto(PlanoDto.builder()
+                        .descricao(avro.getData().getPlano().getDescricao().toString())
+                        .apartamento(avro.getData().getPlano().getApartamento())
+                        .odontologico(avro.getData().getPlano().getOdontologico())
+                        .enfermaria(avro.getData().getPlano().getEnfermaria())
+                        .precoMensalidade(BigDecimal.valueOf(avro.getData().getPlano().getPrecoMensalidade()))
+                        .build())
+                .enderecoDto(EnderecoDto.builder()
+                        .logradouro(avro.getData().getEndereco().getLogradouro().toString())
+                        .uf(avro.getData().getEndereco().getUf().toString())
+                        .cep(avro.getData().getEndereco().getCep().toString())
+                        .complemento(avro.getData().getEndereco().toString())
+                        .numero(avro.getData().getEndereco().getNumero().toString())
+                        .cidade(avro.getData().getEndereco().getCidade().toString())
+                        .bairro(avro.getData().getEndereco().getBairro().toString())
+                        .build())
                 .build();
     }
 }

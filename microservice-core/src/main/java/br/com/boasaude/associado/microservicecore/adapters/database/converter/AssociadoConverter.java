@@ -1,6 +1,8 @@
 package br.com.boasaude.associado.microservicecore.adapters.database.converter;
 
 import br.com.boasaude.associado.microservicecore.adapters.database.entities.Associado;
+import br.com.boasaude.associado.microservicecore.adapters.database.entities.Endereco;
+import br.com.boasaude.associado.microservicecore.adapters.database.entities.Plano;
 import br.com.boasaude.associado.microservicecore.dto.AssociadoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -25,18 +27,27 @@ public class AssociadoConverter {
                 .email(dto.getEmail())
                 .matricula(dto.getMatricula())
                 .situacao(dto.getSituacao().name())
-                .logradouro(dto.getLogradouro())
-                .cep(dto.getCep())
-                .numero(dto.getNumero())
-                .complemento(dto.getComplemento())
-                .bairro(dto.getBairro())
-                .cidade(dto.getCidade())
-                .uf(dto.getUf())
-                .descricao(dto.getDescricao())
-                .apartamento(dto.getApartamento())
-                .enfermaria(dto.getEnfermaria())
-                .odontologico(dto.getOdontologico())
-                .precoMensalidade(dto.getPrecoMensalidade())
+                .plano(
+                        Plano.builder()
+                                .descricao(dto.getPlanoDto().getDescricao())
+                                .apartamento(dto.getPlanoDto().getApartamento())
+                                .odontologico(dto.getPlanoDto().getOdontologico())
+                                .enfermaria(dto.getPlanoDto().getEnfermaria())
+                                .precoMensalidade(dto.getPlanoDto().getPrecoMensalidade())
+                                .build()
+                )
+
+                .endereco(
+                        Endereco.builder()
+                                .logradouro(dto.getEnderecoDto().getLogradouro())
+                                .uf(dto.getEnderecoDto().getUf())
+                                .cep(dto.getEnderecoDto().getCep())
+                                .bairro(dto.getEnderecoDto().getBairro())
+                                .cidade(dto.getEnderecoDto().getCidade())
+                                .complemento(dto.getEnderecoDto().getComplemento())
+                                .numero(dto.getEnderecoDto().getNumero())
+                                .build()
+                )
                 .build();
     };
 }

@@ -47,12 +47,17 @@ public class CriarAssociadoForm {
     @NotEmpty
     @Email
     private String email;
+
+    private Situacao situacao;
+
     @NotNull
     @NotEmpty
     private String estadoCivil;
     @NotNull
     @NotEmpty
     private String genero;
+
+    private String matricula;
     private PlanoForm plano;
     private EnderecoForm endereco;
 

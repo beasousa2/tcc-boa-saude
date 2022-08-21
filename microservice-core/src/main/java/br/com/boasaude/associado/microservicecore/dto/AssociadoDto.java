@@ -24,22 +24,29 @@ public class AssociadoDto {
     private String rg;
     private String orgaoEmissor;
     private LocalDate dataEmissao;
-    private String matricula;
     private String telefone;
     private String email;
+    private Situacao situacao;
     private EstadoCivil estadoCivil;
     private Genero genero;
-    private Situacao situacao;
-    private String descricao;
-    private Boolean odontologico;
-    private Boolean enfermaria;
-    private Boolean apartamento;
-    private BigDecimal precoMensalidade;
-    private String logradouro;
-    private String cep;
-    private String complemento;
-    private String numero;
-    private String bairro;
-    private String cidade;
-    private String uf;
+    private String matricula;
+
+    private PlanoDto planoDto;
+
+    private EnderecoDto enderecoDto;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

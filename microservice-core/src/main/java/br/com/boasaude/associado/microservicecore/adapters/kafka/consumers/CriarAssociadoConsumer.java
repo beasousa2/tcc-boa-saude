@@ -1,7 +1,13 @@
 package br.com.boasaude.associado.microservicecore.adapters.kafka.consumers;
 
+//import br.com.boasaude.associado.microservicecore.adapters.kafka.converts.CriarNovoAssociadoConverter;
+//import br.com.boasaude.associado.criar_associado_novo_realizada.CriaAssociadoNovoRealizada;
+//import br.com.boasaude.associado.microservicecore.adapters.kafka.header.KafkaHeader;
+//import br.com.boasaude.associado.microservicecore.adapters.kafka.header.KafkaHeaderDto;
+//import br.com.boasaude.associado.microservicecore.dto.AssociadoDto;
+//import br.com.boasaude.associado.microservicecore.usecase.interfaces.CriarNovoAssociadoUC;
+import br.com.boasaude.associado.apirest.criar_associado_novo_realizada.CriaAssociadoNovoRealizada;
 import br.com.boasaude.associado.microservicecore.adapters.kafka.converts.CriarNovoAssociadoConverter;
-import br.com.boasaude.associado.criar_associado_novo_realizada.CriaAssociadoNovoRealizada;
 import br.com.boasaude.associado.microservicecore.adapters.kafka.header.KafkaHeader;
 import br.com.boasaude.associado.microservicecore.adapters.kafka.header.KafkaHeaderDto;
 import br.com.boasaude.associado.microservicecore.dto.AssociadoDto;

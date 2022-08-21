@@ -5,6 +5,7 @@ import br.com.boasaude.associado.apirest.adapters.kafka.producers.CriarAssociado
 import br.com.boasaude.associado.apirest.dto.AssociadoDto;
 import br.com.boasaude.associado.apirest.dto.KafkaHeaderDto;
 import br.com.boasaude.associado.apirest.adapters.kafka.config.port.interfaces.CriarAssociadoPort;
+import br.com.boasaude.associado.apirest.dto.form.CriarAssociadoForm;
 import br.com.boasaude.associado.criar_associado_novo_realizada.CriaAssociadoNovoRealizada;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,8 +28,8 @@ public class CriarAssociadoPortImpl implements CriarAssociadoPort {
 
 
     @Override
-    public void execute(AssociadoDto associadoDto) {
-        CriaAssociadoNovoRealizada avro = converter.dtoToAvro(associadoDto);
+    public void execute(CriarAssociadoForm form) {
+        CriaAssociadoNovoRealizada avro = converter.dtoToAvro(form);
         KafkaHeaderDto kafkaDto = KafkaHeaderDto.builder()
                 .fluxo("CRIAR_NOVO_ASSOCIADO")
                 .topico(topic)
@@ -37,6 +38,7 @@ public class CriarAssociadoPortImpl implements CriarAssociadoPort {
                 .build();
 
         producer.producerSuccess(avro, kafkaDto);
+        System.out.println("TransactionID: " + transactionId);
 
     }
 }
