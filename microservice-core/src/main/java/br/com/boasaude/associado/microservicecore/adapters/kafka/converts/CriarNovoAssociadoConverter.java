@@ -1,6 +1,6 @@
 package br.com.boasaude.associado.microservicecore.adapters.kafka.converts;
 
-import br.com.boasaude.associado.apirest.criar_associado_novo_realizada.CriaAssociadoNovoRealizada;
+import br.com.boasaude.associado.criar_associado_novo_realizada.CriaAssociadoNovoRealizada;
 import br.com.boasaude.associado.microservicecore.dto.AssociadoDto;
 import br.com.boasaude.associado.microservicecore.dto.EnderecoDto;
 import br.com.boasaude.associado.microservicecore.dto.PlanoDto;

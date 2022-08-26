@@ -1,5 +1,5 @@
 {
-    "namespace": "br.com.boasaude.associado.apirest.criar_associado_novo_realizada",
+    "namespace": "br.com.boasaude.associado.criar_associado_novo_realizada",
     "type": "record",
     "name": "CriaAssociadoNovoRealizada",
     "fields": [
