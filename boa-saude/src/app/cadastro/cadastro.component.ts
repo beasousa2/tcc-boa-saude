@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CriarAssociado, Endereco, Plano } from '../models/associado.model';
+import { CadastroAssociadoService } from './cadastro-associado.service';
 
 const CPF = '([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})';
 
@@ -12,9 +14,30 @@ export class CadastroComponent implements OnInit {
 
   cadastroAssociado!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  planoAssociado = {
+    descricao: 'Apartamento II',
+    odontologico: true,
+    enfermaria: true,
+    apartamento: true,
+    precoMensalidade: 500.00
+  }
+
+  genero: string = '';
+  estadoCivil: string = '';
+  buttonDisabled: boolean = true;
+
+  generoOptions = [{value: 'Feminino'}, {value: 'Masculino'}];
+  estadoCivilOptions = [
+    {value: 'Solteiro'},
+    {value: 'Casado'},
+    {value: 'União Estável'},
+    {value: 'Divorciado'},
+    {value: 'Viúvo'}]
+
+  constructor(private formBuilder: FormBuilder, private service: CadastroAssociadoService) { }
 
   ngOnInit(): void {
+
     this.cadastroAssociado = this.formBuilder.group({
       nomeCompleto: ['', [
         Validators.required,
@@ -75,15 +98,63 @@ export class CadastroComponent implements OnInit {
       ]]
 
     });
-
   }
 
+  selectGenero(value: string): any {
+    return this.genero = value;
+  }
 
+  selectEstadoCivil(value: string): any {
+    return this.estadoCivil = value;
+  }
+
+  onCheckboxChange(event: any) {
+    if(event.target.checked) {
+      this.buttonDisabled = false;
+    } else {
+      this.buttonDisabled = true;
+    }
+
+  }
 
   register() {
-    console.log(this.cadastroAssociado.get('nomeCompleto')?.value)
-    console.log(this.cadastroAssociado.get('nomeCompleto')?.touched)
-    console.log(this.cadastroAssociado.get('nomeCompleto')?.errors?.['minLength(10)'])
+    this.cadastroAssociado.valid ? this.cadastroAssociado : false;
+    const endereco: Endereco = {
+      logradouro: this.cadastroAssociado.get('endereco')?.value,
+      cep: this.cadastroAssociado.get('cep')?.value,
+      numero: this.cadastroAssociado.get('numero')?.value,
+      complemento: this.cadastroAssociado.get('complemento')?.value,
+      bairro: this.cadastroAssociado.get('bairro')?.value,
+      cidade: this.cadastroAssociado.get('cidade')?.value,
+      uf: this.cadastroAssociado.get('uf')?.value
+    }
+    const plano: Plano = {
+      descricao: this.planoAssociado.descricao,
+      odontologico: this.planoAssociado.odontologico,
+      enfermaria: this.planoAssociado.enfermaria,
+      apartamento: this.planoAssociado.apartamento,
+      precoMensalidade: this.planoAssociado.precoMensalidade
+    }
+
+    const user: CriarAssociado = {
+      nome: this.cadastroAssociado.get('nomeCompleto')?.value,
+      dataNascimento: this.cadastroAssociado.get('dataNascimento')?.value,
+      cpf: this.cadastroAssociado.get('cpf')?.value,
+      rg: this.cadastroAssociado.get('rg')?.value,
+      orgaoEmissor: this.cadastroAssociado.get('orgaoEmissor')?.value,
+      dataEmissao: this.cadastroAssociado.get('dataEmissao')?.value,
+      telefone: this.cadastroAssociado.get('telefone')?.value,
+      email: this.cadastroAssociado.get('email')?.value,
+      estadoCivil: this.estadoCivil,
+      genero: this.genero,
+      plano: plano,
+      endereco: endereco
+    }
+
+    console.log(user)
+    this.service.cadastroAssociado(user);
   }
+
+
 
 }

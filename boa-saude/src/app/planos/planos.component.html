@@ -4,10 +4,18 @@
   <h2 class="fonte-l bs-m-b-lg">Escolha um dos nossos planos</h2>
 
   <div class="bs-row bs-lg">
-    <app-cards></app-cards>
-    <app-cards></app-cards>
-    <app-cards></app-cards>
-    <app-cards></app-cards>
+    <app-cards [valor]="enfermariaI" ></app-cards>
+    <app-cards [valor]="enfermariaII"></app-cards>
+    <app-cards [valor]="apartamentoI"></app-cards>
+    <app-cards [valor]="apartamentoII"></app-cards>
+  </div>
+</div>
+
+<div *ngIf="planos | async as planos" >
+
+  <div *ngFor="let plano of planos">
+    <p>Descricao</p>
+    {{ plano.descricao }}
   </div>
 </div>
 

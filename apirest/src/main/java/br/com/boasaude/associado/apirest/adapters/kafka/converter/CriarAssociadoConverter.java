@@ -2,6 +2,7 @@ package br.com.boasaude.associado.apirest.adapters.kafka.converter;
 
 import br.com.boasaude.associado.apirest.dto.AssociadoDto;
 import br.com.boasaude.associado.apirest.dto.form.CriarAssociadoForm;
+import br.com.boasaude.associado.apirest.enums.Situacao;
 import br.com.boasaude.associado.criar_associado_novo_realizada.*;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class CriarAssociadoConverter {
                         .setTelefone(form.getTelefone())
                         .setEstadoCivil(form.getEstadoCivil())
                         .setGenero(form.getGenero())
-                        .setSituacao(form.getSituacao().toString())
+                        .setSituacao(Situacao.ATIVO.getCodigo())
                         .build())
                 .setEndereco(Endereco.newBuilder()
                         .setLogradouro(form.getEndereco().getLogradouro())

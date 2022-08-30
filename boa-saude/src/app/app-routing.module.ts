@@ -17,7 +17,7 @@ const routes: Routes = [
     .then((m) => m.LoginModule)
   },
   {
-    path: 'planos',
+    path: 'planos/:age',
     loadChildren: () => import('../app/planos/planos.module')
     .then((m) => m.PlanosModule)
   },

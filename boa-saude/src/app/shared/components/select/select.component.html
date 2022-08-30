@@ -1,8 +1,22 @@
-<div class="select-container" slot="button" behavior="button">
-  <i class="bi bi-gender-ambiguous"></i>
-  <select class="select-menu">
-    <option>Feminino</option>
-    <option>Masculino</option>
-  </select>
+<div class="bs-form-group">
+  <label for=""> {{ field }} </label>
+  <div class="bs-input-group">
+    <i class="bi bi-gender-ambiguous"></i>
+    <input
+      type="text"
+      value=" {{value}} "
+      placeholder="{{ placeholder }}"
+      [(ngModel)]="value"
+      (blur)="onTouched()"
+      >
+    <i  [ngClass]="active == false ? 'bi bi-caret-down-fill' : 'bi bi-caret-up-fill'" [style.transition]="active == true ? '.10s' : ''" (click)=" active == false ? showContent() : close()"></i>
+  </div>
 </div>
+  <div class="content" [style.display]="active == true ? 'block' : 'none'">
+    <ul class="options">
+      <li class="fonte-s" *ngFor="let opt of options" (click)="selectOption(opt.value)" > {{opt.value}} </li>
+    </ul>
+  </div>
+
+<app-messages [control]="control" message="{{ field }}"></app-messages>
 

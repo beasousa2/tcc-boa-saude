@@ -1,0 +1,357 @@
+{
+  "associados": [
+    {
+      "id": 1,
+      "nome": "Beatriz Sousa",
+      "dataNascimento": "2022-08-03",
+      "cpf": "02668281245",
+      "rg": "7228670",
+      "orgaoEmissor": "PC/PA",
+      "dataEmissao": "2022-08-03",
+      "telefone": "string",
+      "email": "beasousa20@outlook.com",
+      "estadoCivil": "SOLTEIRO",
+      "genero": "FEMININO",
+      "plano": {
+        "descricao": "apartamento",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "Ezeriel Monico de Matos",
+        "cep": "66075220",
+        "numero": "15",
+        "complemento": "string",
+        "bairro": "Guama",
+        "cidade": "Belem",
+        "uf": "PA"
+      }
+    },
+    {
+      "nome": "hgfhgfh gfhfghfgh",
+      "dataNascimento": "2022-08-18",
+      "cpf": "02668281245",
+      "rg": "gfhfghgfh",
+      "orgaoEmissor": "fhgfhfgdh",
+      "dataEmissao": "2022-08-09",
+      "telefone": "gjhyjytuytuytuy",
+      "email": "nome@email.com",
+      "estadoCivil": "Solteiro",
+      "genero": "Masculino",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "fdghfgdh",
+        "cep": "gfhfghgfh",
+        "numero": "ghg",
+        "complemento": "dfghgfdhgfh",
+        "bairro": "ghfgdhfgh",
+        "cidade": "ytrdgg",
+        "uf": "ht"
+      },
+      "id": 2
+    },
+    {
+      "nome": "hgfhgfh gfhfghfgh",
+      "dataNascimento": "2022-08-18",
+      "cpf": "02668281245",
+      "rg": "gfhfghgfh",
+      "orgaoEmissor": "fhgfhfgdh",
+      "dataEmissao": "2022-08-09",
+      "telefone": "gjhyjytuytuytuy",
+      "email": "nome@email.com",
+      "estadoCivil": "Solteiro",
+      "genero": "Masculino",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "fdghfgdh",
+        "cep": "gfhfghgfh",
+        "numero": "ghg",
+        "complemento": "dfghgfdhgfh",
+        "bairro": "ghfgdhfgh",
+        "cidade": "ytrdgg",
+        "uf": "ht"
+      },
+      "id": 3
+    },
+    {
+      "nome": "hgfhgfh gfhfghfgh",
+      "dataNascimento": "2022-08-18",
+      "cpf": "02668281245",
+      "rg": "gfhfghgfh",
+      "orgaoEmissor": "fhgfhfgdh",
+      "dataEmissao": "2022-08-09",
+      "telefone": "gjhyjytuytuytuy",
+      "email": "nome@email.com",
+      "estadoCivil": "Solteiro",
+      "genero": "Masculino",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "fdghfgdh",
+        "cep": "gfhfghgfh",
+        "numero": "ghg",
+        "complemento": "dfghgfdhgfh",
+        "bairro": "ghfgdhfgh",
+        "cidade": "ytrdgg",
+        "uf": "ht"
+      },
+      "id": 4
+    },
+    {
+      "nome": "hgfhgfh gfhfghfgh",
+      "dataNascimento": "2022-08-18",
+      "cpf": "02668281245",
+      "rg": "gfhfghgfh",
+      "orgaoEmissor": "fhgfhfgdh",
+      "dataEmissao": "2022-08-09",
+      "telefone": "gjhyjytuytuytuy",
+      "email": "nome@email.com",
+      "estadoCivil": "Solteiro",
+      "genero": "Masculino",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "fdghfgdh",
+        "cep": "gfhfghgfh",
+        "numero": "ghg",
+        "complemento": "dfghgfdhgfh",
+        "bairro": "ghfgdhfgh",
+        "cidade": "ytrdgg",
+        "uf": "ht"
+      },
+      "id": 5
+    },
+    {
+      "nome": "hgfhgfh gfhfghfgh",
+      "dataNascimento": "2022-08-18",
+      "cpf": "02668281245",
+      "rg": "gfhfghgfh",
+      "orgaoEmissor": "fhgfhfgdh",
+      "dataEmissao": "2022-08-09",
+      "telefone": "gjhyjytuytuytuy",
+      "email": "nome@email.com",
+      "estadoCivil": "Solteiro",
+      "genero": "Masculino",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "fdghfgdh",
+        "cep": "gfhfghgfh",
+        "numero": "ghg",
+        "complemento": "dfghgfdhgfh",
+        "bairro": "ghfgdhfgh",
+        "cidade": "ytrdgg",
+        "uf": "ht"
+      },
+      "id": 6
+    },
+    {
+      "nome": "hgfhgfh gfhfghfgh",
+      "dataNascimento": "2022-08-18",
+      "cpf": "02668281245",
+      "rg": "gfhfghgfh",
+      "orgaoEmissor": "fhgfhfgdh",
+      "dataEmissao": "2022-08-09",
+      "telefone": "gjhyjytuytuytuy",
+      "email": "nome@email.com",
+      "estadoCivil": "Solteiro",
+      "genero": "Masculino",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "fdghfgdh",
+        "cep": "gfhfghgfh",
+        "numero": "ghg",
+        "complemento": "dfghgfdhgfh",
+        "bairro": "ghfgdhfgh",
+        "cidade": "ytrdgg",
+        "uf": "ht"
+      },
+      "id": 7
+    },
+    {
+      "nome": "hgfhgfh gfhfghfgh",
+      "dataNascimento": "2022-08-18",
+      "cpf": "02668281245",
+      "rg": "gfhfghgfh",
+      "orgaoEmissor": "fhgfhfgdh",
+      "dataEmissao": "2022-08-09",
+      "telefone": "gjhyjytuytuytuy",
+      "email": "nome@email.com",
+      "estadoCivil": "Solteiro",
+      "genero": "Masculino",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "fdghfgdh",
+        "cep": "gfhfghgfh",
+        "numero": "ghg",
+        "complemento": "dfghgfdhgfh",
+        "bairro": "ghfgdhfgh",
+        "cidade": "ytrdgg",
+        "uf": "ht"
+      },
+      "id": 8
+    },
+    {
+      "nome": "hgfhgfh gfhfghfgh",
+      "dataNascimento": "2022-08-18",
+      "cpf": "02668281245",
+      "rg": "gfhfghgfh",
+      "orgaoEmissor": "fhgfhfgdh",
+      "dataEmissao": "2022-08-09",
+      "telefone": "gjhyjytuytuytuy",
+      "email": "nome@email.com",
+      "estadoCivil": "Solteiro",
+      "genero": "Masculino",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "fdghfgdh",
+        "cep": "gfhfghgfh",
+        "numero": "ghg",
+        "complemento": "dfghgfdhgfh",
+        "bairro": "ghfgdhfgh",
+        "cidade": "ytrdgg",
+        "uf": "ht"
+      },
+      "id": 9
+    },
+    {
+      "nome": "hgfhgfh gfhfghfgh",
+      "dataNascimento": "2022-08-18",
+      "cpf": "02668281245",
+      "rg": "gfhfghgfh",
+      "orgaoEmissor": "fhgfhfgdh",
+      "dataEmissao": "2022-08-09",
+      "telefone": "gjhyjytuytuytuy",
+      "email": "nome@email.com",
+      "estadoCivil": "Solteiro",
+      "genero": "Masculino",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "fdghfgdh",
+        "cep": "gfhfghgfh",
+        "numero": "ghg",
+        "complemento": "dfghgfdhgfh",
+        "bairro": "ghfgdhfgh",
+        "cidade": "ytrdgg",
+        "uf": "ht"
+      },
+      "id": 10
+    },
+    {
+      "nome": "",
+      "dataNascimento": "",
+      "cpf": "",
+      "rg": "",
+      "orgaoEmissor": "",
+      "dataEmissao": "",
+      "telefone": "",
+      "email": "",
+      "estadoCivil": "",
+      "genero": "",
+      "plano": {
+        "descricao": "Apartamento II",
+        "odontologico": true,
+        "enfermaria": true,
+        "apartamento": true,
+        "precoMensalidade": 500
+      },
+      "endereco": {
+        "logradouro": "",
+        "cep": "",
+        "numero": "",
+        "complemento": null,
+        "bairro": "",
+        "cidade": "",
+        "uf": ""
+      },
+      "id": 11
+    }
+  ],
+  "planos": [
+    {
+      "id": 1,
+      "descricao": "Enfermaria I",
+      "odontologico": false,
+      "enfermaria": true,
+      "apartamento": false,
+      "precoMensalidade": 120
+    },
+    {
+      "id": 2,
+      "descricao": "Enfermaria II",
+      "odontologico": true,
+      "enfermaria": true,
+      "apartamento": false,
+      "precoMensalidade": 150
+    },
+    {
+      "id": 3,
+      "descricao": "Apartamento I",
+      "odontologico": false,
+      "enfermaria": true,
+      "apartamento": true,
+      "precoMensalidade": 200
+    },
+    {
+      "id": 4,
+      "descricao": "Apartamento I",
+      "odontologico": true,
+      "enfermaria": true,
+      "apartamento": true,
+      "precoMensalidade": 250
+    }
+  ]
+}

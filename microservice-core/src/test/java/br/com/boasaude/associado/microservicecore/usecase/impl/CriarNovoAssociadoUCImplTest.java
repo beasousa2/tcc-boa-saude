@@ -2,7 +2,7 @@ package br.com.boasaude.associado.microservicecore.usecase.impl;
 
 import br.com.boasaude.associado.microservicecore.adapters.database.converter.AssociadoConverter;
 import br.com.boasaude.associado.microservicecore.adapters.database.entities.Associado;
-import br.com.boasaude.associado.microservicecore.dto.AssociadoDto;
+import br.com.boasaude.associado.microservicecore.dto.CriaAssociadoDto;
 import br.com.boasaude.associado.microservicecore.enums.EstadoCivil;
 import br.com.boasaude.associado.microservicecore.enums.Genero;
 import br.com.boasaude.associado.microservicecore.enums.Situacao;
@@ -29,7 +29,7 @@ public class CriarNovoAssociadoUCImplTest {
     private SalvarAssociadoBancoPort port;
     @Mock
     private AssociadoConverter associadoConverter;
-    private AssociadoDto dto;
+    private CriaAssociadoDto dto;
     private Associado associado;
 
 
@@ -77,8 +77,8 @@ public class CriarNovoAssociadoUCImplTest {
                 .build();
     }
 
-    private AssociadoDto setAssociadoDto() {
-        return AssociadoDto.builder()
+    private CriaAssociadoDto setAssociadoDto() {
+        return CriaAssociadoDto.builder()
                 .nome("teste")
                 .dataNascimento(LocalDate.now())
                 .cpf("02668281245")

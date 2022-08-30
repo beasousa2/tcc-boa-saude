@@ -8,17 +8,22 @@ import { TextosInicioComponent } from './components/textos-inicio/textos-inicio.
 import { BeneficiosComponent } from './components/beneficios/beneficios.component';
 import { MaterialModule } from '../shared/modules/material/material.module';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TextoInicioModule } from './components/textos-inicio/textos-inicio.module';
 
 
 
 @NgModule({
-  declarations: [PaginaInicialComponent, TextosInicioComponent, BeneficiosComponent],
+  declarations: [PaginaInicialComponent, BeneficiosComponent],
   imports: [
     CommonModule,
     PaginaInicialRoutingModule,
     HeaderModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TextoInicioModule
   ]
 })
 export class PaginaInicialModule { }

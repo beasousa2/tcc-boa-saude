@@ -1,5 +1,6 @@
 package br.com.boasaude.associado.microservicecore.dto;
 
+
 import br.com.boasaude.associado.microservicecore.enums.EstadoCivil;
 import br.com.boasaude.associado.microservicecore.enums.Genero;
 import br.com.boasaude.associado.microservicecore.enums.Situacao;
@@ -8,15 +9,13 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Builder
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AssociadoDto {
+public class InformacoesPessoaisDto {
 
     private String nome;
     private LocalDate dataNascimento;
@@ -30,23 +29,4 @@ public class AssociadoDto {
     private EstadoCivil estadoCivil;
     private Genero genero;
     private String matricula;
-
-    private PlanoDto planoDto;
-
-    private EnderecoDto enderecoDto;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

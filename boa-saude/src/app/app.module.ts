@@ -9,13 +9,14 @@ import { LoginComponent } from './login/login.component';
 import { PlanosComponent } from './planos/planos.component';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PlanosModule } from './planos/planos.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
-    LoginComponent,
-    PlanosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +24,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    PlanosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

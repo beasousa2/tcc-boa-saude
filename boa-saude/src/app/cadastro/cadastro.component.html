@@ -53,21 +53,21 @@
             inputType="text"
             formControlName="orgaoEmissor"
             [control]="cadastroAssociado.get('orgaoEmissor')"></app-inputs>
-          <app-inputs
-            label="Seu gênero"
-            placeholder="selecione"
-            icon="bi bi-gender-ambiguous"
-            inputType="text"
-            formControlName="genero"
-            [control]="cadastroAssociado.get('genero')"></app-inputs>
-          <app-inputs
-            label="Seu estado civil"
-            placeholder="selecione"
-            icon="bi bi-person"
-            inputType="text"
-            formControlName="estadoCivil"
-            [control]="cadastroAssociado.get('estadoCivil')"></app-inputs>
-            <app-select></app-select>
+            <app-select
+             field="Seu estado civil"
+             formControlName="estadoCivil"
+             [control]="cadastroAssociado.get('estadoCivil')"
+             [options]="estadoCivilOptions"
+             (selectedValue)="selectEstadoCivil($event)"
+            ></app-select>
+            <app-select
+             field="Seu gênero"
+             formControlName="genero"
+             [control]="cadastroAssociado.get('genero')"
+             [options]="generoOptions"
+             (selectedValue)="selectGenero($event)"
+            ></app-select>
+
         </div>
       </div>
       <div id="endereco" class="bs-m-b-2xl" >
@@ -151,11 +151,11 @@
         </div>
       </div>
       <div id="termos">
-        <input type="checkbox" name="termos" id="">
+        <input type="checkbox" name="termos" id="" (change)="onCheckboxChange($event)">
         <p>Confirmo que Li e Aceito o contrato e termos de uso </p>
       </div>
       <div id="submit">
-        <button type="submit" class="bs-btn bs-btn-lg-primary" >Confirmar cadastro</button>
+        <button type="submit" class="bs-btn bs-btn-lg-primary" [disabled]="buttonDisabled ? true : false">Confirmar cadastro</button>
       </div>
     </form>
   </div>

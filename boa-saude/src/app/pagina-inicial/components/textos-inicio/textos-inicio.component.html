@@ -4,13 +4,17 @@
     <p>Com os melhores e mais acessíveis cuidados para a sua saúde</p>
     <div class="simular-plano">
       <p>Simule um plano para você</p>
-      <div class="input-group">
-        <input type="text" placeholder="Comece nos dizendo sua idade">
-        <button><span><mat-icon>arrow_forward</mat-icon></span></button>
-      </div>
+      <form [formGroup]="idadeForm" >
+        <div class="input-group">
+          <input type="text" placeholder="Comece nos dizendo sua idade" formControlName="idade">
+          <button type="submit" (click)="setIdade()"><span></span></button>
+        </div>
+      </form>
     </div>
   </div>
   <div class="imagem">
     <img src="../../../../assets/doctors.svg" alt="" srcset="">
   </div>
 </div>
+
+
