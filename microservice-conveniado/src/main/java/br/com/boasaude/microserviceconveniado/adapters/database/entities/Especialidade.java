@@ -1,17 +1,17 @@
 package br.com.boasaude.microserviceconveniado.adapters.database.entities;
 
+import br.com.boasaude.microserviceconveniado.enums.TipoConveniado;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name = "especialidade")
 @Builder
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Especialidade {
 
     @Id
@@ -21,4 +21,7 @@ public class Especialidade {
 
     @Column(name = "especialidade", nullable = false)
     private String especialidade;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<TipoConveniado> tipoConveniados;
 }

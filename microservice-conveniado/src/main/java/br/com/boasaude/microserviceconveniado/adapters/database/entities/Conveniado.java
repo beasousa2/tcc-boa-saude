@@ -1,5 +1,6 @@
 package br.com.boasaude.microserviceconveniado.adapters.database.entities;
 
+import br.com.boasaude.microserviceconveniado.enums.TipoConveniado;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,8 +12,6 @@ import java.util.List;
 @Entity(name = "conveniado")
 @Builder
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Conveniado {
 
     @Id
@@ -32,8 +31,10 @@ public class Conveniado {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Procedimento> procedimentos;
 
-    @OneToOne
-    private EspecialidadeConveniado especialidadeConveniado;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Especialidade> especialidades;
+
+    private TipoConveniado tipoConveniado;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;

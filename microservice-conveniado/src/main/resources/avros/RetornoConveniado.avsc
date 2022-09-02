@@ -1,0 +1,77 @@
+{
+  "namespace": "br.com.boasaude.microserviceconveniado.retorno_conveniado",
+  "type": "record",
+  "name": "RetornoConveniado",
+  "fields": [
+    {
+      "name": "data",
+      "type": {
+        "type": "record",
+        "name": "RetornoConveniadoData",
+        "fields": [
+          {
+            "name": "id", "type": ["null", "long"], "default": null
+          },
+          {
+            "name": "nome_fantasia", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "endereco",
+            "type": {
+              "name": "Endereco",
+              "type": "record",
+              "fields": [
+                {"name": "logradouro", "type": ["null", "string"], "default": null},
+                {"name": "cep", "type": ["null", "string"], "default": null},
+                {"name": "numero", "type": ["null", "string"], "default": null},
+                {"name": "complemento", "type": ["null", "string"], "default": null},
+                {"name": "bairro", "type": ["null", "string"], "default": null},
+                {"name": "cidade", "type": ["null", "string"], "default": null},
+                {"name": "uf", "type": ["null", "string"], "default": null}
+              ]
+            }
+          },
+          {
+            "name": "tipo_conveniado", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "especialidades",
+            "type": {
+              "type": "array",
+              "items": {
+                "type": "record",
+                "name": "especialidade",
+                "fields": [
+                  {
+                    "name": "id", "type": ["null", "long"], "default": null
+                  },
+                  {
+                    "name": "especialidade", "type": ["null", "string"], "default": null
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "procedimentos",
+            "type": {
+              "type": "array",
+              "items": {
+                "type": "record",
+                "name": "procedimento",
+                "fields": [
+                  {
+                    "name": "id", "type": ["null", "long"], "default": null
+                  },
+                  {
+                    "name": "procedimento", "type": ["null", "string"], "default": null
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -7,17 +7,11 @@ import br.com.boasaude.associado.microservicecore.adapters.kafka.header.KafkaHea
 import br.com.boasaude.associado.microservicecore.dto.CriaAssociadoDto;
 import br.com.boasaude.associado.microservicecore.usecase.interfaces.CriarNovoAssociadoUC;
 import lombok.RequiredArgsConstructor;
-import org.apache.kafka.clients.consumer.Consumer;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;
-import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -31,7 +25,6 @@ public class CriarAssociadoConsumer {
 
     @Value("${spring.kafka.consumer.criar.topic}")
     private String topicConsumer;
-    //ConsumerRecord<String, CriaAssociadoNovoRealizada>
 
 
     @KafkaListener(topics = "${spring.kafka.consumer.criar.topic}",

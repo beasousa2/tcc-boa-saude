@@ -20,12 +20,6 @@ public class Procedimento {
     @Column(name = "id", updatable = false, unique = true, nullable = false)
     private Long id;
 
-    @OneToOne
-    private TipoProcedimento tipoprocedimento;
-
     @Column(name = "nome", nullable = false)
     private String nomeProcedimento;
-
-    @ManyToMany(cascade = CascadeType.ALL)
-    private List<Especialidade> especialidade;
 }
