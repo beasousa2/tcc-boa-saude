@@ -1,6 +1,10 @@
 package br.com.boasaude.microserviceconveniado.ports.interfaces;
 
+import br.com.boasaude.microserviceconveniado.adapters.database.entities.Conveniado;
+
+import java.util.List;
+
 public interface BuscarConveniadoNomeEspecialidadePort {
 
-    void execute(String nomeEspecialidade);
+    List<Conveniado> execute(String nomeEspecialidade);
 }

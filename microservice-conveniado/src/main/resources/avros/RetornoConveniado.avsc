@@ -40,7 +40,7 @@
               "type": "array",
               "items": {
                 "type": "record",
-                "name": "especialidade",
+                "name": "Especialidade",
                 "fields": [
                   {
                     "name": "id", "type": ["null", "long"], "default": null
@@ -58,7 +58,7 @@
               "type": "array",
               "items": {
                 "type": "record",
-                "name": "procedimento",
+                "name": "Procedimento",
                 "fields": [
                   {
                     "name": "id", "type": ["null", "long"], "default": null

@@ -7,5 +7,6 @@ import lombok.Getter;
 @Builder
 public class EspecialidadeDto {
 
+    private Long id;
     private String especialidade;
 }
