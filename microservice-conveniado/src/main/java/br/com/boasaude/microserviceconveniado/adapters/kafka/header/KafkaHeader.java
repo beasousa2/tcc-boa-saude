@@ -25,5 +25,19 @@ public class KafkaHeader {
           return headers;
      }
 
+     public static KafkaHeaderDto retrieveHeader(
+             String transactionId,
+             String topico,
+             String correlationId,
+             String fluxo
+     ) {
+          return KafkaHeaderDto.builder()
+                  .transactionId(transactionId)
+                  .correlationId(correlationId)
+                  .topico(topico)
+                  .fluxo(fluxo)
+                  .build();
+     }
+
 
 }

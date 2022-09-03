@@ -15,7 +15,6 @@ public class BuscarConveniadoIdPortImpl implements BuscarConveniadoIdPort {
     private final ConveniadoRepository repository;
     @Override
     public Optional<Conveniado> execute(Long id) {
-        Optional<Conveniado> conveniado = repository.findById(id);
-        return conveniado;
+        return repository.findById(id);
     }
 }

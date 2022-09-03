@@ -6,7 +6,7 @@ import br.com.boasaude.microserviceconveniado.adapters.kafka.header.KafkaHeaderD
 import br.com.boasaude.microserviceconveniado.adapters.kafka.producer.BuscarConveniadoNomeEspencialidadeProducer;
 import br.com.boasaude.microserviceconveniado.buscar_conveniado_nome_especialidade_resposta.BuscarConveniadoNomeEspecialidadeResposta;
 import br.com.boasaude.microserviceconveniado.dto.BuscarConveniadoNomeEspecialidadeDto;
-import br.com.boasaude.microserviceconveniado.dto.RetornoConveniadoListaDto;
+import br.com.boasaude.microserviceconveniado.dto.BuscarConveniadoNomeEspecialidadeRespostaDto;
 import br.com.boasaude.microserviceconveniado.ports.interfaces.BuscarConveniadoNomeEspecialidadePort;
 import br.com.boasaude.microserviceconveniado.usecase.interfaces.BuscarConveniadoNomeEspecialidadeUC;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +23,7 @@ public class BuscarConveniadoNomeEspecialidadeUCImpl implements BuscarConveniado
     private final BuscarConveniadoNomeEspecialidadeConverter converter;
     public void execute(BuscarConveniadoNomeEspecialidadeDto dto, KafkaHeaderDto kafkaHeaderDto) {
         List<Conveniado> conveniados =  port.execute(dto.getNomeEspecialidade());
-        RetornoConveniadoListaDto listaDto = converter.entityToDto(conveniados);
+        BuscarConveniadoNomeEspecialidadeRespostaDto listaDto = converter.entityToDto(conveniados);
         BuscarConveniadoNomeEspecialidadeResposta avro = converter.dtoToAvro(listaDto);
 
         producer.producerSuccess(avro, kafkaHeaderDto);

@@ -1,12 +1,15 @@
 package br.com.boasaude.microserviceconveniado.adapters.kafka.consumers;
 
 import br.com.boasaude.microserviceconveniado.adapters.kafka.converter.BuscarConveniadoIdConverter;
+import br.com.boasaude.microserviceconveniado.adapters.kafka.header.KafkaHeader;
+import br.com.boasaude.microserviceconveniado.adapters.kafka.header.KafkaHeaderDto;
 import br.com.boasaude.microserviceconveniado.buscar_conveniado_id.BuscarConveniadoId;
 import br.com.boasaude.microserviceconveniado.dto.BuscarConveniadoIdDto;
 import br.com.boasaude.microserviceconveniado.usecase.interfaces.BuscarConveniadoIdUC;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.support.Acknowledgment;
+import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +24,13 @@ public class ConsumerBuscarConveniadoId {
     @Value("${spring.kafka.consumer.buscar-id.topic}")
     private String topicConsumer;
 
-    public void consumer(@Payload BuscarConveniadoId payload, final Acknowledgment ack) {
+    public void consumer(@Payload BuscarConveniadoId payload,
+                         @Header(KafkaHeader.TRANSACTIONID) String transactionId,
+                         @Header(KafkaHeader.CORRELATIONID) String correlationId,
+                         final Acknowledgment ack) {
         BuscarConveniadoIdDto dto = converter.avroToDto(payload);
-        usecase.execute(dto);
+        KafkaHeaderDto kafkaHeaderDto = KafkaHeader.retrieveHeader(transactionId, correlationId, topicConsumer, "Buscar Conveniado por Id");
+        usecase.execute(dto, kafkaHeaderDto);
         ack.acknowledge();
     }
 }

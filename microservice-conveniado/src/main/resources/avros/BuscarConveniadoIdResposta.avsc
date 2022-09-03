@@ -1,13 +1,13 @@
 {
-  "namespace": "br.com.boasaude.microserviceconveniado.retorno_conveniado",
+  "namespace": "br.com.boasaude.microserviceconveniado.buscar_conveniado_id_resposta",
   "type": "record",
-  "name": "RetornoConveniado",
+  "name": "BuscarConveniadoIdResposta",
   "fields": [
     {
       "name": "data",
       "type": {
         "type": "record",
-        "name": "RetornoConveniadoData",
+        "name": "BuscarConveniadoIdRespostaData",
         "fields": [
           {
             "name": "id", "type": ["null", "long"], "default": null

@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RetornoConveniadoListaDto {
+public class BuscarConveniadoNomeEspecialidadeRespostaDto {
 
     private List<ConveniadoDto> conveniadoDtoList;
 }

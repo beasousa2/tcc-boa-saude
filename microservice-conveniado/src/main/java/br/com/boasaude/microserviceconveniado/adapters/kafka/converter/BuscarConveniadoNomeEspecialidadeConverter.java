@@ -4,7 +4,7 @@ import br.com.boasaude.microserviceconveniado.buscar_conveniado_nome_especialida
 
 import br.com.boasaude.microserviceconveniado.buscar_conveniado_nome_especialidade_resposta.*;
 import br.com.boasaude.microserviceconveniado.dto.BuscarConveniadoNomeEspecialidadeDto;
-import br.com.boasaude.microserviceconveniado.dto.RetornoConveniadoListaDto;
+import br.com.boasaude.microserviceconveniado.dto.BuscarConveniadoNomeEspecialidadeRespostaDto;
 import br.com.boasaude.microserviceconveniado.dto.conveniado.ConveniadoDto;
 import br.com.boasaude.microserviceconveniado.adapters.database.entities.Conveniado;
 import br.com.boasaude.microserviceconveniado.dto.conveniado.EnderecoDto;
@@ -18,8 +18,8 @@ import java.util.stream.Collectors;
 @Component
 public class BuscarConveniadoNomeEspecialidadeConverter {
 
-    public RetornoConveniadoListaDto entityToDto(List<Conveniado> conveniados) {
-        return RetornoConveniadoListaDto.builder()
+    public BuscarConveniadoNomeEspecialidadeRespostaDto entityToDto(List<Conveniado> conveniados) {
+        return BuscarConveniadoNomeEspecialidadeRespostaDto.builder()
                 .conveniadoDtoList(conveniados.stream()
                         .map(conveniado -> ConveniadoDto.builder()
                                 .id(conveniado.getId())
@@ -57,7 +57,7 @@ public class BuscarConveniadoNomeEspecialidadeConverter {
                 .build();
     }
 
-    public BuscarConveniadoNomeEspecialidadeResposta dtoToAvro(RetornoConveniadoListaDto dto) {
+    public BuscarConveniadoNomeEspecialidadeResposta dtoToAvro(BuscarConveniadoNomeEspecialidadeRespostaDto dto) {
         return BuscarConveniadoNomeEspecialidadeResposta.newBuilder()
                 .setData(BuscarConveniadoNomeEspecialidadeRespostaData.newBuilder()
                         .setConveniados(dto.getConveniadoDtoList().stream()
