@@ -1,0 +1,21 @@
+{
+  "namespace": "br.com.boasaude.microserviceprestador.buscar_prstadores_especialidade",
+  "type": "record",
+  "name": "BuscarPrestadoresEspecialidade",
+  "fields": [
+    {
+      "name": "data",
+      "type": {
+        "type": "record",
+        "name": "BuscarPrestadoresEspecialidadeData",
+        "fields": [
+          {
+            "name": "especialidade",
+            "type": ["null", "string"],
+            "default": null
+          }
+        ]
+      }
+    }
+  ]
+}

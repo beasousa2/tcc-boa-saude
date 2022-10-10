@@ -25,6 +25,11 @@ const routes: Routes = [
     path: 'cadastro',
     loadChildren: () => import('../app/cadastro/cadastro.module')
     .then((m)=> m.CadastroModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('../app/home/home.module')
+    .then((m)=> m.HomeModule)
   }
 ];
 

@@ -1,0 +1,46 @@
+{
+  "namespace": "br.com.boasaude.microservicemarcarconsulta.marcar_nova_consulta",
+  "name": "MarcarNovaConsulta",
+  "type": "record",
+  "fields": [
+    {
+      "name": "data",
+      "type": {
+        "name": "MarcarNovaConsultaData",
+        "type": "record",
+        "fields": [
+          {
+            "name": "nome_paciente", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "codigo_paciente", "type": ["null", "long"], "default": null
+          },
+          {
+            "name": "matricula_paciente", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "nome_medico", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "documento", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "codigo_medico", "type": ["null", "long"], "default": null
+          },
+          {
+            "name": "codigo_conveniado", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "data_hora", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "especialidade", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "endereco", "type": ["null", "string"], "default": null
+          }
+        ]
+      }
+    }
+  ]
+}

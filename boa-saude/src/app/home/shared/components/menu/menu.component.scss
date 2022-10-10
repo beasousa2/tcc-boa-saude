@@ -1,0 +1,109 @@
+.sidebar {
+  height: 100%;
+  width: 240px;
+  background: var(--preto-0);
+  padding: 10px 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  #btn {
+    position: relative;
+    background: none;
+    border: none;
+    left: 90%;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    transform: translateX(-50%);
+    i {
+      color: var(--azul-400);
+    }
+  }
+
+  .sidebar-content {
+    margin: 20px 0 10rem;
+    ul {
+      padding-left: 0;
+      li {
+        height: 50px;
+        width: 100%;
+        list-style: none;
+        line-height: 50px;
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          border-radius: 8px;
+          transition: all 0.4s ease;
+          i {
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: var(--azul-400);
+          }
+          span {
+            color: var(--azul-400);
+            font-weight: 400;
+          }
+          &:hover {
+            background: var(--azul-400);
+            span {
+              color: var(--preto-0);
+            }
+            i {
+              color: var(--preto-0);
+            }
+          }
+        }
+      }
+    }
+  }
+  .sidebar-footer {
+    position: relative;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--preto-0);
+      .sidebar-button {
+        margin-top: 10px;
+        height: 70px;
+        width: 100%;
+        border-radius: 12px;
+        background: var(--azul-400);
+        padding: .5rem;
+
+
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          color: var(--preto-0);
+          font-size: 14px;
+          line-height: 1rem;
+        }
+        .button-new {
+          button {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: var(--azul-300);
+            i {
+              color: var(--preto-0);
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

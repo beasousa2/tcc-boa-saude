@@ -8,11 +8,11 @@
 		<version>2.6.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.boasaude.associado</groupId>
+	<groupId>br.com.boasaude</groupId>
 	<artifactId>apirest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>apirest</name>
-	<description>Demo project for Spring Boot</description>
+	<description>API Rest Boa Saude</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

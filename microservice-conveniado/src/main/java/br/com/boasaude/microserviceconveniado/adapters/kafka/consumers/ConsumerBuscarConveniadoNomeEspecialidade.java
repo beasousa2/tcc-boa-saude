@@ -8,6 +8,7 @@ import br.com.boasaude.microserviceconveniado.dto.BuscarConveniadoNomeEspecialid
 import br.com.boasaude.microserviceconveniado.usecase.interfaces.BuscarConveniadoNomeEspecialidadeUC;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -23,6 +24,9 @@ public class ConsumerBuscarConveniadoNomeEspecialidade {
     private String topico;
 
 
+    @KafkaListener(topics = "${spring.kafka.consumer.buscar-nome-especialidade.topic}",
+            groupId = "${spring.kafka.consumer.buscar-nome-especialidade.group-id}",
+            errorHandler = "buscarConveniadoEspecialidadeErrorHandler")
     public void consumer(@Payload BuscarConveniadoNomeEspecialidade payload,
                          @Header(KafkaHeader.TRANSACTIONID) String transactionId,
                          @Header(KafkaHeader.CORRELATIONID) String correlationId,

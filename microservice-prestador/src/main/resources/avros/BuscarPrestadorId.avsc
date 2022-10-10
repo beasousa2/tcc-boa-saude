@@ -1,0 +1,21 @@
+{
+  "namespace": "br.com.boasaude.microserviceprestador.buscar_prestador_id",
+  "type": "record",
+  "name": "BuscarPrestadorId",
+  "fields": [
+    {
+      "name": "data",
+      "type": {
+        "type": "record",
+        "name": "BuscarPrestadorIdData",
+        "fields": [
+          {
+            "name": "id_prestador",
+            "type": ["null", "string"],
+            "default": null
+          }
+        ]
+      }
+    }
+  ]
+}

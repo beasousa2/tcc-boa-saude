@@ -1,0 +1,16 @@
+networks:
+  kong-net:
+    external: true
+services:
+
+  microserviceassociado:
+    build: ./microservice-associado
+    ports:
+      - "8083"
+    networks:
+      - kong-net
+    tty:
+      true
+    restart:
+      unless-stopped
+    

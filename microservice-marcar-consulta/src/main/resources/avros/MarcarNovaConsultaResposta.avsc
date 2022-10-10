@@ -1,0 +1,37 @@
+{
+  "namespace": "br.com.boasaude.microservicemarcarconsulta.marcar_nova_consulta_resposta",
+  "name": "MarcarNovaConsultaResposta",
+  "type": "record",
+  "fields": [
+    {
+      "name": "data",
+      "type": {
+        "name": "MarcarNovaConsultaRespostaData",
+        "type": "record",
+        "fields": [
+          {
+            "name": "id", "type": ["null", "long"], "default": null
+          },
+          {
+            "name": "codigo_paciente", "type": ["null", "long"], "default": null
+          },
+          {
+            "name": "matricula_paciente", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "codigo_medico", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "codigo_conveniado", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "data_hora", "type": ["null", "string"], "default": null
+          },
+          {
+            "name": "descricao", "type": ["null", "string"], "default": null
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "namespace": "br.com.boasaude.associado.criar_associado_resposta",
+  "type": "record",
+  "name": "CriarAssociadoResposta",
+  "fields": [
+    {"name":  "data",
+      "type": {
+        "type": "record",
+        "name": "CriarAssociadoRespostaData",
+        "fields":[
+          {"name": "id_associado", "type": ["null", "string"], "default": null},
+          {"name": "nome_completo", "type": ["null", "string"], "default": null},
+          {"name": "matricula", "type": ["null", "string"], "default": null},
+          {"name": "email", "type": ["null", "string"], "default": null},
+          {"name": "situacao", "type": ["null", "string"], "default": null}
+        ]
+      }
+    }
+
+  ]
+}
