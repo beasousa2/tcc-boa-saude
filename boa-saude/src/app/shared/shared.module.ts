@@ -7,11 +7,14 @@ import { InputsPasswordModule } from './components/inputs-password/inputs-passwo
 import { CardsModule } from './components/cards/cards.module';
 import { MessagesModule } from './components/messages/messages.module';
 import { SelectModule } from './components/select/select.module';
+import { SelectFormModule } from './components/select-form/select-form.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+
+  ],
   imports: [
     CommonModule
   ],
@@ -22,7 +25,8 @@ import { SelectModule } from './components/select/select.module';
     InputsPasswordModule,
     CardsModule,
     MessagesModule,
-    SelectModule
+    SelectModule,
+    SelectFormModule
   ]
 })
 export class SharedModule { }

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaterialModule } from './shared/modules/material/material.module';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { PlanosComponent } from './planos/planos.component';
@@ -21,7 +20,6 @@ import { PlanosModule } from './planos/planos.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,

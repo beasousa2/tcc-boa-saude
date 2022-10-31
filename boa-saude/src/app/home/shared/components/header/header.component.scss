@@ -1,14 +1,64 @@
 .header {
+  display: flex;
+  margin-top: 0;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 80px;
   border-bottom: 1px solid var(--preto-300);
   background: var(--preto-0);
+  padding: 1.8rem 4.5rem;
 
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 24px 122px;
-  justify-content: space-between;
+  img {
+    height: 1rem;
+  }
 
-  position: relative;
+  .toggle {
+    display: flex;
+    align-items: center;
+    button {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: transparent;
+      margin-right: 1rem;
+      transition: all 300ms ease;
+      span {
+        font-size: 2.5rem;
+      }
+
+      #on {
+        color: var(--laranja-800);
+      }
+
+      #off {
+        color: var(--preto-400);
+      }
+    }
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.4rem;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .profile-photo {
+      img {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+  }
 }

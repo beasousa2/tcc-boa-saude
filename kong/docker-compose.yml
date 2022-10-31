@@ -1,3 +1,5 @@
+version: '3.7'
+
 volumes:
   kong_data: {}
 
@@ -7,7 +9,7 @@ networks:
 
 services:
   kong-migrations:
-    image: "kong:latest"
+    image: "kong:2.3.2-alpine"
     command: kong migrations bootstrap
     depends_on:
       - db
@@ -25,7 +27,7 @@ services:
         condition: on-failure
 
   kong-migrations-up:
-    image: "kong:latest"
+    image: "kong:2.3.2-alpine"
     command: kong migrations up && kong migrations finish
     depends_on:
       - db
@@ -43,7 +45,7 @@ services:
         condition: on-failure
 
   kong:
-    image: "kong:latest"
+    image: "kong:2.3.2-alpine"
     user: "kong"
     depends_on:
       - db
@@ -97,8 +99,8 @@ services:
     tty: true
     networks:
       - kong-net
-    volumes:
-      - kong_data:/var/lib/postgresql/data
+    # volumes:
+    #   - kong_data:/var/lib/postgresql/data
 
   konga-prepare:
     container_name: konga-prepare

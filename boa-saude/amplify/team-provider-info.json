@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-boasaude-dev-150344-authRole",
+      "UnauthRoleArn": "arn:aws:iam::458612288907:role/amplify-boasaude-dev-150344-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::458612288907:role/amplify-boasaude-dev-150344-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-boasaude-dev-150344-deployment",
+      "UnauthRoleName": "amplify-boasaude-dev-150344-unauthRole",
+      "StackName": "amplify-boasaude-dev-150344",
+      "StackId": "arn:aws:cloudformation:us-east-2:458612288907:stack/amplify-boasaude-dev-150344/7e0dcd90-5946-11ed-94e0-0a89f1489f56",
+      "AmplifyAppId": "d3gmbo4bdxcstd"
+    },
+    "categories": {
+      "auth": {
+        "boasaude15d39fc5": {}
+      },
+      "geo": {
+        "deliveryPlace": {}
+      }
+    }
+  }
+}

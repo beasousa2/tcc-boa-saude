@@ -13,13 +13,9 @@ public class MarcarNovaConsultaRespostaDto {
 
     private Long id;
     private LocalDateTime dataHora;
-    private String nomePaciente;
     private String matriculaPaciente;
-    private Long codigoPaciente;
-    private String endereco;
-    private String nomeMedico;
-    private String documento;
-    private Long codigoMedico;
-    private Long codigoConveniado;
-    private String especialidade;
+    private String codigoPaciente;
+    private String codigoMedico;
+    private String codigoConveniado;
+    private String descricao;
 }

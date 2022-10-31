@@ -1,7 +1,7 @@
 package br.com.boasaude.microservicemarcarconsulta.port.impl;
 
-import br.com.boasaude.microservicemarcarconsulta.adapters.database.entity.MarcarConsulta;
-import br.com.boasaude.microservicemarcarconsulta.adapters.database.repository.MarcarConsultaRepository;
+import br.com.boasaude.microservicemarcarconsulta.adapters.database.entity.Consulta;
+import br.com.boasaude.microservicemarcarconsulta.adapters.database.repository.ConsultaRepository;
 import br.com.boasaude.microservicemarcarconsulta.exceptions.ConsultaExistenteException;
 import br.com.boasaude.microservicemarcarconsulta.port.interfaces.MarcarNovaConsultaPort;
 import lombok.RequiredArgsConstructor;
@@ -11,15 +11,17 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class MarcarNovaConsultaPortImpl implements MarcarNovaConsultaPort {
 
-    private final MarcarConsultaRepository repository;
+    private final ConsultaRepository repository;
 
     @Override
-    public MarcarConsulta execute(MarcarConsulta marcarConsulta) {
+    public Consulta execute(Consulta consulta) {
 
-        if(repository.existsByCodigoMedicoAndDataHora(marcarConsulta.getCodigoMedico(), marcarConsulta.getDataHora())) {
-            throw new ConsultaExistenteException("Profissional já possui uma consulta nesse horário");
+        if(repository.existsByCodigoMedicoAndDataHora(consulta.getCodigoMedico(), consulta.getDataHora())) {
+            throw new ConsultaExistenteException("Horário indisponível");
         }
 
-        return repository.save(marcarConsulta);
+        return repository.save(consulta);
+
+
     }
 }

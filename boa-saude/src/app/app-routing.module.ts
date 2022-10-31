@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './home/components/dashboard/dashboard.component';
+import { MarcarConsultaComponent } from './home/components/marcar-consulta/marcar-consulta.component';
+import { PrestadorComponent } from './home/components/marcar-consulta/prestador/prestador.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -30,6 +34,7 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('../app/home/home.module')
     .then((m)=> m.HomeModule)
+
   }
 ];
 

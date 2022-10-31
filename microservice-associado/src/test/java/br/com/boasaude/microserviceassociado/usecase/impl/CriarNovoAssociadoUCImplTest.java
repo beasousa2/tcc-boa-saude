@@ -12,9 +12,11 @@ import br.com.boasaude.microserviceassociado.enums.Situacao;
 import br.com.boasaude.microserviceassociado.ports.interfaces.SalvarAssociadoBancoPort;
 import br.com.boasaude.microserviceassociado.utils.GerarMatricula;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.math.BigDecimal;
@@ -40,17 +42,17 @@ public class CriarNovoAssociadoUCImplTest {
         associado = setAssociado();
     }
 
-//    @Test
-//    public void salvaAssociadoUseCase() {
-//        Mockito.when(associadoConverter.dtoToEntity(dto)).thenReturn(associado);
+    @Test
+    public void salvaAssociadoUseCase() {
+        //Mockito.when(associadoConverter.dtoToEntity(dto)).thenReturn(associado);
 //        String transactionId = UUID.randomUUID().toString();
 //        String correlationId = UUID.randomUUID().toString();
 //        String topico = "topicoConsumer";
 //        KafkaHeaderDto headers = KafkaHeader.retrieveHeader(transactionId, topico, correlationId, "Criar novo associado no banco de dados");
 //        useCase.execute(dto, headers);
-//
-//        Mockito.verify(port).execute(Mockito.any());
-//    }
+
+        Mockito.verify(port).execute(Mockito.any());
+    }
 
     private Associado setAssociado() {
         return Associado.builder()

@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
 
 @OpenAPIDefinition(
         info = @Info(
-                title = "microserviceassociado",
+                title = "microservicemarcarconsulta",
                 version = "v1.0"
         ),
         servers = @Server(url = "http://microservicemarcarconsulta:8085")

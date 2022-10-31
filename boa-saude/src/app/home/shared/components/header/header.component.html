@@ -1,13 +1,20 @@
 <div class="header">
-  <div class="farro w-400 logo">Boasaude</div>
-  <div>
-    <div class="form-check form-switch ">
-      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-      <label class="form-check-label" for="flexSwitchCheckChecked">Usar minha localização</label>
-    </div>
+  <img src="../../../../../assets/Boasaude.svg">
+  <div class="toggle">
+    <button (click)=" toggle == false ? on() : off()">
+      <span class="material-icons-sharp" id="on" [style.display]="toggle == true ? 'block' : 'none'">toggle_on</span>
+      <span class="material-icons-sharp" id="off" [style.display]="toggle == false ? 'block' : 'none'">toggle_off</span>
+    </button>
+    <label for="">Usar minha localização atual</label>
   </div>
-  <div>
-
+  <div class="profile">
+    <div class="info">
+      <p>Hey, <b>Fernanda</b></p>
+      <small class="text-muted" >88.428968-32</small>
+    </div>
+    <div class="profile-photo">
+        <img src="../../../../../assets/profile-3.jpg" alt="">
+    </div>
   </div>
 </div>
 

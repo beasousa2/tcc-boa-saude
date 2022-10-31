@@ -1,11 +1,12 @@
 package br.com.boasaude.microservicemarcarconsulta.exceptions;
 
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Component;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-@Component
-@AllArgsConstructor
+@ResponseStatus(value = HttpStatus.FOUND)
 public class ConsultaExistenteException extends RuntimeException {
 
-    private String message;
+    public ConsultaExistenteException(String message) {
+        super(message);
+    }
 }

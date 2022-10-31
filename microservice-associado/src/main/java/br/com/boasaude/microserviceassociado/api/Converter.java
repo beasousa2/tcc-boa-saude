@@ -2,6 +2,7 @@ package br.com.boasaude.microserviceassociado.api;
 
 import br.com.boasaude.microserviceassociado.adapters.entities.Associado;
 import br.com.boasaude.microserviceassociado.api.form.AssociadoForm;
+import br.com.boasaude.microserviceassociado.api.form.ConsultaForm;
 import br.com.boasaude.microserviceassociado.dto.*;
 import br.com.boasaude.microserviceassociado.enums.EstadoCivil;
 import br.com.boasaude.microserviceassociado.enums.Genero;
@@ -92,4 +93,6 @@ public class Converter {
 
                 .build();
     }
+
+
 }

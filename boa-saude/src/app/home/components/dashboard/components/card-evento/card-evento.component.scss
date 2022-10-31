@@ -1,0 +1,152 @@
+.evento-card {
+  padding: 1rem;
+  background: var(--preto-0);
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+
+  &:hover {
+    box-shadow: none;
+  }
+  .card-left {
+    img {
+     height: 62px;
+     width: 62px;
+     border-radius: 50%;
+    }
+  }
+
+  .card-right {
+    display: grid;
+    grid-template-rows: auto 1.4rem auto;
+    gap: .8rem;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--preto-700);
+        margin-bottom: 0;
+      }
+      small {
+        font-size: .8rem;
+        font-weight: 500;
+        color: var(--preto-600);
+      }
+    }
+    //end info
+
+    .due-date {
+      //background: var(--background);
+      display: inline-flex;
+      justify-content: space-between;
+
+      border-radius: 5px;
+      color: var(--color-warning);
+
+      .date {
+        display: inline-flex;
+        span {
+          font-size: 1.2rem;
+          margin-right: 4px;
+        }
+        p {
+          font-size: .87rem;
+          font-weight: 500;
+          color: var(--color-warning);
+        }
+      }
+
+      .time {
+        display: inline-flex;
+        span {
+          font-size: 1.2rem;
+          margin-right: 4px;
+        }
+        p {
+          font-size: .87rem;
+          font-weight: 500;
+          color: var(--color-warning);
+        }
+      }
+    }
+    //end due-date
+    .buttons {
+      display: inline-flex;
+      justify-content: space-between;
+      gap: .5rem;
+      button {
+        font-size: .88rem;
+        width: 80px;
+        padding: 3px;
+        font-weight: 600;
+
+        &:first-child{
+          background: transparent;
+          border: 1px solid var(--primary);
+          color: var(--primary);
+          border-radius: 5px;
+          transition: all 300ms ease;
+
+          &:hover{
+            border: 1px solid var(--primary-dark);
+            color: var(--primary-dark);
+            font-weight: 700;
+          }
+        }
+
+        &:last-child {
+          background: var(--primary);
+          color: var(--preto-0);
+          border-radius: 5px;
+          transition: all 300ms ease;
+
+          &:hover{
+            background: var(--primary-dark);
+          }
+        }
+      }
+    }
+    // end buttons
+  }
+}
+
+@media screen and (max-width: 900px){
+
+  .evento-card {
+    .card-right {
+      .due-date {
+
+        span {
+          font-size: 1.4rem;
+        }
+        .time p {
+          font-size: .9rem;
+
+          font-weight: 600;
+        }
+        .date p {
+          font-size: .9rem;
+
+          font-weight: 600;
+        }
+      }
+
+      .buttons {
+        justify-content: space-evenly;
+        button {
+          height: 2.3rem;
+          font-size: 1rem;
+          width: 100%;
+
+        }
+      }
+    }
+  }
+}

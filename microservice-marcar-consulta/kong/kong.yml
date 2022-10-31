@@ -1,0 +1,20 @@
+_format_version: "1.1"
+services:
+  - name: microservicemarcarconsulta
+    protocol: http
+    host: microservicemarcarconsulta
+    port: 8085
+    path: /
+    plugins: []
+    routes:
+      - tags:
+          &a1
+          - OAS3_import
+          - OAS3file_openapi.json
+        name: microservicemarcarconsulta-novaConsulta
+        methods:
+          - POST
+        paths:
+          - /v1/api/marcar-consulta$
+        strip_path: false
+    tags: *a1

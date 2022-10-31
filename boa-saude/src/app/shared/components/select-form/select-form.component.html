@@ -1,0 +1,13 @@
+<div class="select">
+  <button class="button" id="button" (click)=" active == false ? activeDropdown() : close()">
+    <span id="select-span" >Buscar por</span>
+    <div class="arrow"></div>
+  </button>
+  <div class="dropdown" [style.display]="active == true ? 'flex' : 'none'" >
+    <label class="select-item" for="select-internet">Especialidade</label>
+    <input class="option" id="select-internet" type="radio" name="tipo" value="especialidade">
+
+    <label class="select-item" for="select-internet">Nome</label>
+    <input class="option" id="select-internet" type="radio" name="tipo" value="nome">
+  </div>
+</div>

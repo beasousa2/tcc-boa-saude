@@ -12,10 +12,11 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 
-@Service
+
+@Component
 @RequiredArgsConstructor
 public class CriarAssociadoConsumer {
 
@@ -27,7 +28,7 @@ public class CriarAssociadoConsumer {
 
 
     @KafkaListener(topics = "${spring.kafka.consumer.criar.topic}",
-            groupId = "${spring.kafka.consumer.criar.group-id}",
+            groupId = "${spring.kafka.consumer.consulta.group-id}",
             errorHandler = "criarAssociadoErrorHandler")
     public void consumer(@Payload CriarAssociado payload,
                          @Header(KafkaHeader.TRANSACTIONID) String transactionId,

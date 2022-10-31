@@ -1,7 +1,7 @@
 package br.com.boasaude.microservicemarcarconsulta.usecase.impl;
 
 import br.com.boasaude.microservicemarcarconsulta.adapters.api.form.NovaConsultaForm;
-import br.com.boasaude.microservicemarcarconsulta.adapters.database.entity.MarcarConsulta;
+import br.com.boasaude.microservicemarcarconsulta.adapters.database.entity.Consulta;
 import br.com.boasaude.microservicemarcarconsulta.adapters.kafka.converters.MarcarNovaConsultaConverter;
 import br.com.boasaude.microservicemarcarconsulta.adapters.kafka.header.KafkaHeader;
 import br.com.boasaude.microservicemarcarconsulta.adapters.kafka.header.KafkaHeaderDto;
@@ -17,6 +17,7 @@ import java.util.UUID;
 
 @Component
 @RequiredArgsConstructor
+
 public class MarcarNovaConsultaUCImpl implements MarcarNovaConsultaUC {
 
     private final MarcarNovaConsultaPort port;
@@ -31,11 +32,9 @@ public class MarcarNovaConsultaUCImpl implements MarcarNovaConsultaUC {
     @Override
     public void execute(NovaConsultaForm form) {
         KafkaHeaderDto headers = KafkaHeader.retrieveHeader(transactionId, topico, correlationId, "Nova Consulta");
-        MarcarConsulta marcarConsulta = converter.formToEntity(form);
-        MarcarConsulta consulta = port.execute(marcarConsulta);
+        Consulta marcarConsulta = converter.formToEntity(form);
+        Consulta consulta = port.execute(marcarConsulta);
         MarcarNovaConsultaResposta avro = converter.entityToAvro(consulta);
-        producer.producerSuccess(avro, headers);
-
-
+        //producer.producerSuccess(avro, headers);
     }
 }

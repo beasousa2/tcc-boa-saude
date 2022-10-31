@@ -1,0 +1,12 @@
+{
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "indexName": "deliveryPlace",
+  "dataProvider": "Esri",
+  "dataSourceIntendedUse": "Storage",
+  "isDefault": true
+}

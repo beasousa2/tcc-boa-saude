@@ -1,0 +1,36 @@
+.wrapper-marcar-consulta {
+  width: 100%;
+  padding: 0 2rem;
+  grid-template-rows: 1fr 1fr auto;
+  gap: 2rem;
+
+  .busca {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: .8rem;
+  }
+    .resultados {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper-marcar-consulta {
+    margin-bottom: 2rem;
+    .resultados {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper-marcar-consulta {
+    margin-bottom: 2rem;
+    .resultados {
+      grid-template-columns: auto;
+    }
+  }
+}

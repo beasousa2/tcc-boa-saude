@@ -17,7 +17,6 @@ public class SalvarAssociadoBancoPortImpl implements SalvarAssociadoBancoPort {
     @Override
     public CriarAssociadoResposta execute(Associado associado) {
         Associado result = associadoRepository.save(associado);
-        System.out.println("ID" + result.getId());
         return converter.entityToAvro(result);
     }
 }

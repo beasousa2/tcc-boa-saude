@@ -34,7 +34,7 @@ public class PrestadorControler {
         return ResponseEntity.ok(prestadores);
     }
 
-    @PostMapping("/new")
+    @PostMapping
     public ResponseEntity<HttpStatus> salvarPrestador(@RequestBody @Valid PrestadorForm form) {
         usecasePrestador.execute(form);
         return ResponseEntity.ok(HttpStatus.CREATED);

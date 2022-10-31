@@ -1,21 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Farro:wght@700&family=Montserrat:wght@100;200;300;400;700&display=swap');
-@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
 
 //VARIÁVEIS
 :root {
   --logo: #000B5E;
+  --background:#f6f6f9;
 
-  --azul-900: #001be5;
-  --azul-500: #3437FF;
-  --azul-400: #6656FF;
-  --azul-300: #8975FF;
-  --azul-200: #AF9EFE;
-  --azul-100: #D0C5FE;
-  --azul-50: #EDE7FF;
+
+  --primary: #5161e7;
+  --primary-dark: #3345d9;
+  --primary-700: #162dc8;
+  --azul-300: #737eec;
+  --azul-200: #9ea3f1
+  --azul-100: #c5c7f6;
+  --azul-50: #e8e9fc;
+  --info: #dce1eb;
 
   --laranja-900: #FC7A30;
   --laranja-800: #FF9734;
+  --laranja-600: #ffb83a;
   --laranja-50: #FFF8E4;
 
   --preto-900: #232326;
@@ -31,8 +35,11 @@
   --preto-FA: #FAFAFA;
   --preto-0: #FFFFFF;
 
-  --vermelho-400: #FF4848;
-  --verde-500: #17B51C;
+  --color-danger:#ff7782;
+  --color-success:#41f1b6;
+  --color-warning:#ffbb55;
+
+
 
   // Fonte
   --fonte-xss: 10px;
@@ -63,6 +70,9 @@
   --xl: 36px;
   --2xl: 40px;
   --3xl: 48px;
+
+  --box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+  --box-shadow-input: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
 //RESET
@@ -70,17 +80,34 @@
 * {
   margin: 0;
   padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--preto-800);
+  list-style: none;
 }
 
 html {
-  background: var(--preto-0);
-  height: 100vh;
+  font-size: .88rem;
+
 }
 
-body { height: 100vh; position: relative; }
+body {
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  overflow-x: hidden;
+  color: var(--preto-800);
+  background: var(--background);
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+}
 
 
 //THEME
@@ -135,72 +162,48 @@ body { height: 100vh; position: relative; }
 
 //LAYOUT
 
-.bs-container {
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
 }
 
-.bs-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 24px;
+h2 {
+  font-size: 1.4rem;
 }
 
-.bs-col-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+h3 {
+  font-size: .87rem;
 }
 
-.bs-m-t-lg {
-  margin-top: var(--l);
+h4 {
+  font-size: .8rem;
 }
 
-.bs-m-b-lg {
-  margin-bottom: var(--l);
+h5 {
+  font-size: .77rem;
 }
 
-.bs-m-b-2xl {
-  margin-bottom: var(--2xl);
+small {
+  font-size: .75rem;
 }
 
-
-@media (min-width: 576px) {
-  .bs-container {
-    max-width: 540px;
-  }
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .bs-container {
-    max-width: 720px;
-  }
+.text-muted {
+  color: var(--preto-500);
 }
 
-@media (min-width: 992px) {
-  .bs-container {
-    max-width: 960px;
-  }
+p {
+  color: var(--preto-800);
 }
 
-@media (min-width: 1200px) {
-  .bs-container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .bs-container {
-    max-width: 1320px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .bs-container {
-    max-width: 1460px;
-  }
+b {
+  color: var(--preto-900);
 }
 
 .fonte-xss{ font-size: var(--fonte-xss);}

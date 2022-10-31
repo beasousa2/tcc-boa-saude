@@ -11,10 +11,6 @@ public class MicroserviceAssociadoApplication {
 		SpringApplication.run(MicroserviceAssociadoApplication.class, args);
 	}
 
-
-
-
-
 }
 
 
