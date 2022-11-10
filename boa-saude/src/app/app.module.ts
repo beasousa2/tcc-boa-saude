@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PlanosModule } from './planos/planos.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PlanosModule } from './planos/planos.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    PlanosModule
+    PlanosModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

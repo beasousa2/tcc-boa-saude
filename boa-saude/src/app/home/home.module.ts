@@ -10,6 +10,8 @@ import { DashboardModule } from './components/dashboard/dashboard.module';
 import { MarcarConsultaModule } from './components/marcar-consulta/marcar-consulta.module';
 import { InputsModule } from '../shared/components/inputs/inputs.module';
 import { SelectFormModule } from '../shared/components/select-form/select-form.module';
+import { RouterModule } from '@angular/router';
+import { PrestadorModule } from './components/prestador/prestador.module';
 
 
 @NgModule({
@@ -23,8 +25,10 @@ import { SelectFormModule } from '../shared/components/select-form/select-form.m
     MenuModule,
     DashboardModule,
     MarcarConsultaModule,
+    PrestadorModule,
     InputsModule,
-    SelectFormModule
+    SelectFormModule,
+    RouterModule
   ],
   exports: [
   ]

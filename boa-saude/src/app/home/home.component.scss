@@ -12,9 +12,9 @@ main {
   display: grid;
   grid-template-columns: 18rem auto;
 
-  app-menu {
-    padding-left: 4rem;
-  }
+ aside {
+  padding-left: 3rem;
+ }
 
   .components {
     width: 98%;
@@ -29,12 +29,40 @@ main {
   }
 }
 
+@media screen and (max-width: 900px) {
+  main{
+    grid-template-columns: auto;
+
+    aside {
+      //display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: var(--preto-0);
+      width: 18rem;
+      z-index: 3;
+      box-shadow: 1rem 3rem 4rem var(--preto-400);
+      height: 100vh;
+      padding-right: 1.5rem;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   main{
     grid-template-columns: auto;
 
-    app-menu {
-      display: none;
+    aside {
+      //display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: var(--preto-0);
+      width: 18rem;
+      z-index: 3;
+      box-shadow: 1rem 3rem 4rem var(--preto-400);
+      height: 100vh;
+      padding-right: 1rem;
     }
   }
 }

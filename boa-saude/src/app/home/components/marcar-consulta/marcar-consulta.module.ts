@@ -5,25 +5,17 @@ import { MarcarConsultaComponent } from './marcar-consulta.component';
 import { MarcarConsultaComponentsModule } from './components/marcar-consulta-components.module';
 import { InputsModule } from 'src/app/shared/components/inputs/inputs.module';
 import { SelectFormModule } from 'src/app/shared/components/select-form/select-form.module';
-import { PrestadorComponent } from './prestador/prestador.component';
-import { MarcarConsultaRoutingModule } from './marcar-consulta-routing.module';
-import { BuscarPrestadorComponent } from './buscar-prestador/buscar-prestador.component';
-
-
 
 @NgModule({
   declarations: [
-    MarcarConsultaComponent,
-    PrestadorComponent,
-    BuscarPrestadorComponent
+    MarcarConsultaComponent
     ],
   imports: [
     CommonModule,
     MarcarConsultaComponentsModule,
     InputsModule,
-    SelectFormModule,
-    MarcarConsultaRoutingModule
+    SelectFormModule
   ],
-  exports: [MarcarConsultaComponent,PrestadorComponent, BuscarPrestadorComponent]
+  exports: [MarcarConsultaComponent]
 })
 export class MarcarConsultaModule { }

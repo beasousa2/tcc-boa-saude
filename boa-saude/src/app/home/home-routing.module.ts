@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component'
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PrestadorComponent } from './components/prestador/prestador.component';
 import { MarcarConsultaComponent } from './components/marcar-consulta/marcar-consulta.component';
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent, children: [
+    path: 'home', component: HomeComponent, children: [
       {
         path: 'dashboard',
         title: 'Dashboard',
@@ -15,8 +16,18 @@ const routes: Routes = [
       {
         path: 'consulta',
         title: 'Consulta',
-        component: MarcarConsultaComponent
-
+        children: [
+          {
+            path: 'nova',
+            title: 'Nova Consulta',
+            component: MarcarConsultaComponent
+          },
+        ]
+      },
+      {
+        path:'prestador',
+        title: 'Prestador',
+        component: PrestadorComponent
       }
     ]
   }

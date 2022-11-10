@@ -12,6 +12,11 @@
     height: 1rem;
   }
 
+  #menu {
+    background: transparent;
+    display: none;
+  }
+
   .toggle {
     display: flex;
     align-items: center;
@@ -58,6 +63,47 @@
         height: 2.8rem;
         border-radius: 50%;
         overflow: hidden;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    #menu {
+      display: block;
+    }
+    img {
+      display: none;
+    }
+
+    .profile {
+      .info {
+        display: none;
+      }
+      .profile-photo {
+        img {
+          display: flex;
+        }
+      }
+    }
+}}
+
+@media screen and (max-width: 768px) {
+  .header {
+
+    #menu {
+      display: block;
+    }
+
+    img {
+      display: none;
+    }
+
+    .profile-photo {
+      img {
+        display: block;
       }
     }
   }
