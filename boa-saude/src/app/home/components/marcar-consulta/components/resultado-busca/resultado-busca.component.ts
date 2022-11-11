@@ -16,7 +16,7 @@ export class ResultadoBuscaComponent implements OnInit {
   }
 
   add() {
-    this.router.navigate(['prestador'])
+    this.router.navigate(['/home/'+this.rota])
   }
 
 }

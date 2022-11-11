@@ -6,6 +6,7 @@ import { ResultadoBuscaComponent } from './resultado-busca/resultado-busca.compo
 import { InputsModule } from 'src/app/shared/components/inputs/inputs.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SelectFormModule } from 'src/app/shared/components/select-form/select-form.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -18,7 +19,8 @@ import { SelectFormModule } from 'src/app/shared/components/select-form/select-f
   imports: [
     CommonModule,
     InputsModule,
-    SelectFormModule
+    SelectFormModule,
+    RouterModule
   ],
   exports: [
     BuscaComponent,
