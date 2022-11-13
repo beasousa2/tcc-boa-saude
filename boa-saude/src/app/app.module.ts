@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PlanosModule } from './planos/planos.module';
 import { HomeModule } from './home/home.module';
+import { SwiperModule } from "swiper/angular";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HomeModule } from './home/home.module';
     ReactiveFormsModule,
     HttpClientModule,
     PlanosModule,
-    HomeModule
+    HomeModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,7 @@
   display: block;
   text-align: center;
   padding: 7px 8px;
+  box-shadow: var(--box-shadow);
   transition: all 300ms ease;
   small {
 
@@ -20,6 +21,12 @@
   &:hover {
     background: var(--primary-dark);
     cursor: pointer;
+    box-shadow: none;
+  }
+
+  &.active {
+    background: var(--primary-dark);
+    box-shadow: none;
   }
 }
 

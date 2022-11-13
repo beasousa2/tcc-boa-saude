@@ -12,6 +12,7 @@ import { InputsModule } from '../shared/components/inputs/inputs.module';
 import { SelectFormModule } from '../shared/components/select-form/select-form.module';
 import { RouterModule } from '@angular/router';
 import { PrestadorModule } from './components/prestador/prestador.module';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { PrestadorModule } from './components/prestador/prestador.module';
     PrestadorModule,
     InputsModule,
     SelectFormModule,
-    RouterModule
+    RouterModule,
+    SwiperModule
   ],
   exports: [
   ]

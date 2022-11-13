@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HoraComponent implements OnInit {
 
+  active: Boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClick() {
+    this.active = !this.active;
   }
 
 }

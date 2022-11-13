@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataComponent implements OnInit {
 
+  active: Boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onClick() {
+    this.active = !this.active;
+  }
 }
