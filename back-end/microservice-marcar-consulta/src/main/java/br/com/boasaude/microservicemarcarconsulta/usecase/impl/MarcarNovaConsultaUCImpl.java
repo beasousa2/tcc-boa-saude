@@ -26,7 +26,7 @@ public class MarcarNovaConsultaUCImpl implements MarcarNovaConsultaUC {
 
     private String transactionId = UUID.randomUUID().toString();
     private String correlationId = UUID.randomUUID().toString();
-    @Value("${spring.kafka.consumer.marcar-consulta.topic}")
+    @Value("${spring.kafka.producer.marcar-consulta.topic}")
     private String topico;
 
     @Override
@@ -34,7 +34,10 @@ public class MarcarNovaConsultaUCImpl implements MarcarNovaConsultaUC {
         KafkaHeaderDto headers = KafkaHeader.retrieveHeader(transactionId, topico, correlationId, "Nova Consulta");
         Consulta marcarConsulta = converter.formToEntity(form);
         Consulta consulta = port.execute(marcarConsulta);
+        System.out.println("Consulta: " + consulta.getDataHora()
+        );
         MarcarNovaConsultaResposta avro = converter.entityToAvro(consulta);
-        //producer.producerSuccess(avro, headers);
+        System.out.println("Avro:" + avro.getData().getDataHora());
+        producer.producerSuccess(avro, headers);
     }
 }

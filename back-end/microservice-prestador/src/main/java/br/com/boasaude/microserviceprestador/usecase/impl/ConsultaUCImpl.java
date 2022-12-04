@@ -18,6 +18,7 @@ public class ConsultaUCImpl implements ConsultaUC {
     @Override
     public void execute(ConsultaDto consultaDto) {
         Consulta consulta = converter.converter(consultaDto);
+        System.out.println("Consulta (USECASE): " + consulta.getDataHora());
         port.execute(consulta);
     }
 }

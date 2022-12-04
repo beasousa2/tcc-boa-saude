@@ -30,3 +30,14 @@ export interface Endereco {
   cidade: string;
   uf: string;
 }
+
+export interface Associado {
+  id: string;
+  nome: string;
+  email: string;
+  matricula: string;
+  status: string;
+}
+
+
+

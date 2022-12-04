@@ -15,7 +15,7 @@ public class Consulta {
     @Id
     private String id;
     private Long idConsulta;
-    private String codigoPrestador;
+    private String idPrestador;
     private String descricao;
     private String matriculaPaciente;
     private LocalDateTime dataHora;

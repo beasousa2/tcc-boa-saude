@@ -1,7 +1,7 @@
 package br.com.boasaude.microserviceassociado.usecase.impl;
 
 import br.com.boasaude.microserviceassociado.adapters.database.converter.AssociadoConverter;
-import br.com.boasaude.microserviceassociado.adapters.entities.Associado;
+import br.com.boasaude.microserviceassociado.adapters.database.entities.Associado;
 import br.com.boasaude.microserviceassociado.dto.CriaAssociadoDto;
 import br.com.boasaude.microserviceassociado.dto.EnderecoDto;
 import br.com.boasaude.microserviceassociado.dto.InformacoesPessoaisDto;
@@ -9,7 +9,7 @@ import br.com.boasaude.microserviceassociado.dto.PlanoDto;
 import br.com.boasaude.microserviceassociado.enums.EstadoCivil;
 import br.com.boasaude.microserviceassociado.enums.Genero;
 import br.com.boasaude.microserviceassociado.enums.Situacao;
-import br.com.boasaude.microserviceassociado.ports.interfaces.SalvarAssociadoBancoPort;
+import br.com.boasaude.microserviceassociado.ports.interfaces.AssociadoPort;
 import br.com.boasaude.microserviceassociado.utils.GerarMatricula;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,9 +27,9 @@ import java.time.LocalDate;
 public class CriarNovoAssociadoUCImplTest {
 
     @InjectMocks
-    private CriarNovoAssociadoUCImpl useCase;
+    private AssociadoUCImpl useCase;
     @Mock
-    private SalvarAssociadoBancoPort port;
+    private AssociadoPort port;
     @Mock
     private AssociadoConverter associadoConverter;
     private CriaAssociadoDto dto;

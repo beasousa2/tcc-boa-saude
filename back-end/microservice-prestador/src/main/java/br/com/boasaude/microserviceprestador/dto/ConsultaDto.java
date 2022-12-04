@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Builder
 public class ConsultaDto {
 
-    private Long idConsulta;
+    private Long id;
     private String codigoPrestador;
     private String descricao;
     private String matriculaPaciente;

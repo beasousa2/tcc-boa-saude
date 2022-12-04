@@ -2,7 +2,7 @@
   width: 100%;
   height: 80px;
   border-bottom: 1px solid var(--preto-300);
-
+  background: var(--preto-0);
 
   display: flex;
   flex-direction: row;
@@ -12,12 +12,8 @@
 
   position: relative;
 
-  .logo {
-    font-family: 'Farro';
-    color: var(--logo);
-    font-weight: bold;
-    font-size: var(--font-m);
-    line-height: var(--fontelinha-xl);
+  img {
+    height: 1rem;
   }
 
   ul {

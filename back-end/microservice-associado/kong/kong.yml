@@ -2,7 +2,7 @@ _format_version: "1.1"
 services:
   - name: microserviceassociado
     protocol: http
-    host: microserceassociado
+    host: microserviceassociado
     port: 8083
     path: /
     plugins: []
@@ -15,7 +15,7 @@ services:
         methods:
           - POST
         paths:
-          - /v1/api/associado/new$
+          - /v1/api/associado$
         strip_path: false
       - tags: *a1
         name: microserviceassociado-getById
@@ -23,6 +23,20 @@ services:
           - GET
         paths:
           - /v1/api/associado/(?<id>[^\/]+)$
+        strip_path: false
+      - tags: *a1
+        name: microserviceassociado-getConsulta
+        methods:
+          - GET
+        paths:
+          - /v1/api/associado/consulta/(?<idConsultaMarcada>[^\/]+)$
+        strip_path: false
+      - tags: *a1
+        name: microserviceassociado-getConsultas
+        methods:
+          - GET
+        paths:
+          - /v1/api/associado/consulta/todas/(?<matricula>[^\/]+)$
         strip_path: false
       - tags: *a1
         name: microserviceassociado-getByIdComplete

@@ -2,24 +2,32 @@
   margin: 64px 122px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
   //LOGIN
 
   .login {
     display: flex;
     flex-direction: column;
     width: 360px;
+    justify-content: center;
+    align-items: center;
 
     //TITULOS
     .titulos {
       padding-bottom: var(--fontelinha-3xl);
+      font-family: 'Montserrat', sans-serif;
+
       h1 {
         font-weight: 400;
+        font-size: 2rem;
         text-align: center;
         padding-bottom: var(--fontelinha-s);
       }
       p {
+        font-size: 1.25rem;
         font-weight: 300;
         text-align: center;
       }
@@ -30,7 +38,13 @@
       width: 100%;
 
       .inputs {
-        padding-bottom: 2rem;
+
+        app-inputs {
+          margin-bottom: 2.5rem;
+        }
+        &:first-child {
+
+        }
       }
     }
 
@@ -43,13 +57,13 @@
       a {
         font-size: var(--fonte-s);
         &:first-child {
-          color: var(--preto);
+          color: var(--preto-800);
           font-weight: 300;
         }
         &:last-child {
           text-decoration: none;
           font-weight: bold;
-          color: var(--azul-500);
+          color: var(--primary);
         }
       }
     }
@@ -62,7 +76,7 @@
       }
       a {
         text-decoration: none;
-        color: var(--azul-500);
+        color: var(--primary);
         font-weight: bold;
       }
     }

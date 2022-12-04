@@ -14,29 +14,29 @@ import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
 import org.springframework.kafka.listener.ContainerProperties;
 
-@EnableKafka
-@Configuration
-@AllArgsConstructor
+//@EnableKafka
+//@Configuration
+//@AllArgsConstructor
 public class KafkaConfig {
 
-    private KafkaProperties kafkaProperties;
-
-    @Bean
-    public ConsumerFactory<String, GenericRecord> consumerFactory() {
-        return new DefaultKafkaConsumerFactory<>(kafkaProperties.buildConsumerProperties());
-    }
-
-    @Bean
-    public KafkaListenerContainerFactory<ConcurrentMessageListenerContainer<String, GenericRecord>>
-        kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, GenericRecord> listener =
-                new ConcurrentKafkaListenerContainerFactory<>();
-        listener.setConsumerFactory(consumerFactory());
-
-        listener.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL);
-
-        listener.getContainerProperties().setSyncCommits(Boolean.TRUE);
-
-        return listener;
-    }
+//    private KafkaProperties kafkaProperties;
+//
+//    @Bean
+//    public ConsumerFactory<String, GenericRecord> consumerFactory() {
+//        return new DefaultKafkaConsumerFactory<>(kafkaProperties.buildConsumerProperties());
+//    }
+//
+//    @Bean
+//    public KafkaListenerContainerFactory<ConcurrentMessageListenerContainer<String, GenericRecord>>
+//        kafkaListenerContainerFactory() {
+//        ConcurrentKafkaListenerContainerFactory<String, GenericRecord> listener =
+//                new ConcurrentKafkaListenerContainerFactory<>();
+//        listener.setConsumerFactory(consumerFactory());
+//
+//        listener.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL);
+//
+//        listener.getContainerProperties().setSyncCommits(Boolean.TRUE);
+//
+//        return listener;
+//    }
 }

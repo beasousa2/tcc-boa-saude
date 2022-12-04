@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface PrestadorRepository extends MongoRepository<Prestador, String> {
 
-    List<Prestador> findByEspecialidades(String especialidade);
+    List<Prestador> findAllByEspecialidadesNomeEspecialidadeAndCidade(String especialidade, String cidade);
 }

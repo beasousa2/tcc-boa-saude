@@ -1,7 +1,7 @@
 package br.com.boasaude.microserviceassociado.ports.impl;
 
 import br.com.boasaude.associado.criar_associado_resposta.CriarAssociadoResposta;
-import br.com.boasaude.microserviceassociado.adapters.entities.Associado;
+import br.com.boasaude.microserviceassociado.adapters.database.entities.Associado;
 import br.com.boasaude.microserviceassociado.adapters.database.repository.AssociadoRepository;
 import br.com.boasaude.microserviceassociado.utils.GerarMatricula;
 import org.junit.Assert;
@@ -20,7 +20,7 @@ import java.time.LocalDate;
 public class SalvarAssociadoBancoPortImplTest {
 
     @InjectMocks
-    private SalvarAssociadoBancoPortImpl salvarAssociadoBancoPort;
+    private AssociadoPortImpl salvarAssociadoBancoPort;
     @Mock
     private AssociadoRepository repository;
 

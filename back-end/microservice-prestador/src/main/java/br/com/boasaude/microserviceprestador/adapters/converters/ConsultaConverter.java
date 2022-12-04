@@ -6,13 +6,14 @@ import br.com.boasaude.microserviceprestador.dto.ConsultaDto;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Component
 public class ConsultaConverter {
 
     public ConsultaDto converter(MarcarNovaConsultaResposta avro) {
         return ConsultaDto.builder()
-                .idConsulta(avro.getData().getId())
+                .id(avro.getData().getId())
                 .codigoPrestador(avro.getData().getCodigoMedico().toString())
                 .dataHora(LocalDateTime.parse(avro.getData().getDataHora()))
                 .descricao(avro.getData().getDescricao().toString())
@@ -22,9 +23,9 @@ public class ConsultaConverter {
 
     public Consulta converter(ConsultaDto dto) {
         return Consulta.builder()
-                .idConsulta(dto.getIdConsulta())
-                .codigoPrestador(dto.getCodigoPrestador())
-                .dataHora(dto.getDataHora())
+                .idConsulta(dto.getId())
+                .idPrestador(dto.getCodigoPrestador())
+                .dataHora(dto.getDataHora().minusHours(3))
                 .descricao(dto.getDescricao())
                 .matriculaPaciente(dto.getMatriculaPaciente())
                 .build();

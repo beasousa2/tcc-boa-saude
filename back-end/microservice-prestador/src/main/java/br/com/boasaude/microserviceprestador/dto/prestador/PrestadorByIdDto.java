@@ -11,7 +11,9 @@ public class PrestadorByIdDto {
     private String id;
     private String nomeCompleto;
     private String telefone;
-    private EnderecoDto endereco;
+    private String logradouro;
+    private String numero;
+    private String bairro;
     private TipoDocumento tipoDocumento;
     private String documento;
 

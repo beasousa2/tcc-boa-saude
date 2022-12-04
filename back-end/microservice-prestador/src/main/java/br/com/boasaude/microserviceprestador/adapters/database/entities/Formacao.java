@@ -7,13 +7,12 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
-@Document(collection = "formacao_data")
+@Document(collection = "prestador_formacao_data")
 @Builder
 @Getter
 public class Formacao {
 
-    @Id
-    private String id;
+
     private String curso;
     private String anoInicio;
     private String anoConclusao;

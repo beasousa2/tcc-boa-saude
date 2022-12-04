@@ -14,6 +14,7 @@ public class ConsultaPortImpl implements ConsultaPort {
 
     @Override
     public void execute(Consulta consulta) {
+        System.out.println("Consulta (PORT): " + consulta.getDataHora());
         repository.save(consulta);
     }
 }

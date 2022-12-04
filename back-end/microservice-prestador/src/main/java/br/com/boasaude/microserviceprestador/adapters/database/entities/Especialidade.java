@@ -12,8 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 public class Especialidade {
 
-    @Id
-    private String id;
+
     private String nomeEspecialidade;
     private TipoEspecialidade tipo;
 }

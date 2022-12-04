@@ -1,9 +1,6 @@
 package br.com.boasaude.microserviceassociado.adapters.kafka.converts;
 
 import br.com.boasaude.associado.criar_associado.CriarAssociado;
-import br.com.boasaude.associado.criar_associado_resposta.CriarAssociadoResposta;
-import br.com.boasaude.associado.criar_associado_resposta.CriarAssociadoRespostaData;
-import br.com.boasaude.microserviceassociado.adapters.entities.Associado;
 import br.com.boasaude.microserviceassociado.dto.*;
 import br.com.boasaude.microserviceassociado.enums.EstadoCivil;
 import br.com.boasaude.microserviceassociado.enums.Genero;
@@ -53,45 +50,4 @@ public class CriarNovoAssociadoConverter {
                 .build();
     }
 
-    public CriarAssociadoResposta entityToAvro(Associado associado) {
-        return CriarAssociadoResposta.newBuilder()
-                .setData(CriarAssociadoRespostaData.newBuilder()
-                        .setIdAssociado(associado.getId())
-                        .setNomeCompleto(associado.getNome())
-                        .setEmail(associado.getEmail())
-                        .setMatricula(associado.getMatricula())
-                        .setSituacao(associado.getSituacao())
-                        .build())
-                .build();
-    }
-
-    public Associado dtoToEntity(CriaAssociadoDto dto){
-        return Associado.builder()
-                .nome(dto.getInfoPessoaisDto().getNome())
-                .dataNascimento(dto.getInfoPessoaisDto().getDataNascimento())
-                .cpf(dto.getInfoPessoaisDto().getCpf())
-                .rg(dto.getInfoPessoaisDto().getRg())
-                .orgaoEmissor(dto.getInfoPessoaisDto().getOrgaoEmissor())
-                .dataEmissao(dto.getInfoPessoaisDto().getDataEmissao())
-                .estadoCivil(dto.getInfoPessoaisDto().getEstadoCivil().name())
-                .genero(dto.getInfoPessoaisDto().getGenero().name())
-                .telefone(dto.getInfoPessoaisDto().getTelefone())
-                .email(dto.getInfoPessoaisDto().getEmail())
-                .matricula(dto.getInfoPessoaisDto().getMatricula())
-                .situacao(dto.getInfoPessoaisDto().getSituacao().name())
-                .descricao(dto.getPlanoDto().getDescricao())
-                .apartamento(dto.getPlanoDto().getApartamento())
-                .odontologico(dto.getPlanoDto().getOdontologico())
-                .enfermaria(dto.getPlanoDto().getEnfermaria())
-                .precoMensalidade(dto.getPlanoDto().getPrecoMensalidade())
-                .logradouro(dto.getEnderecoDto().getLogradouro())
-                .uf(dto.getEnderecoDto().getUf())
-                .cep(dto.getEnderecoDto().getCep())
-                .bairro(dto.getEnderecoDto().getBairro())
-                .cidade(dto.getEnderecoDto().getCidade())
-                .complemento(dto.getEnderecoDto().getComplemento())
-                .numero(dto.getEnderecoDto().getNumero())
-
-                .build();
-    };
 }

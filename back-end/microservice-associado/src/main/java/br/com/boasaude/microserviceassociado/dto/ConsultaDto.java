@@ -9,10 +9,9 @@ import java.time.LocalDateTime;
 @Getter
 public class ConsultaDto {
 
-    private String id;
+    private Long id;
     private LocalDateTime dataHora;
     private String matriculaPaciente;
-    private String codigoPaciente;
     private String codigoMedico;
     private String codigoConveniado;
     private String descricao;
