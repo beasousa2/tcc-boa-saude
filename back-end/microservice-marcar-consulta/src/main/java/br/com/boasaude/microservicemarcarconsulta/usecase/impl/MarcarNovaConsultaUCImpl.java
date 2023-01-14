@@ -17,7 +17,6 @@ import java.util.UUID;
 
 @Component
 @RequiredArgsConstructor
-
 public class MarcarNovaConsultaUCImpl implements MarcarNovaConsultaUC {
 
     private final MarcarNovaConsultaPort port;
@@ -34,10 +33,7 @@ public class MarcarNovaConsultaUCImpl implements MarcarNovaConsultaUC {
         KafkaHeaderDto headers = KafkaHeader.retrieveHeader(transactionId, topico, correlationId, "Nova Consulta");
         Consulta marcarConsulta = converter.formToEntity(form);
         Consulta consulta = port.execute(marcarConsulta);
-        System.out.println("Consulta: " + consulta.getDataHora()
-        );
         MarcarNovaConsultaResposta avro = converter.entityToAvro(consulta);
-        System.out.println("Avro:" + avro.getData().getDataHora());
         producer.producerSuccess(avro, headers);
     }
 }

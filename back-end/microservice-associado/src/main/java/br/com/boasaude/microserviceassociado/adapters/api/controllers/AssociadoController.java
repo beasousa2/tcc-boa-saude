@@ -26,38 +26,38 @@ public class AssociadoController {
 
     @PostMapping()
     public ResponseEntity<DadosAssociadoDto> save(@RequestBody @Valid AssociadoForm form, UriComponentsBuilder builder) {
-        String id = associadoUC.execute(form);
+        String id = associadoUC.salvar(form);
         URI uri = builder.path("v1/api/associado/{id}").buildAndExpand(id).toUri();
         return ResponseEntity.created(uri).build();
     }
 
     @GetMapping
     public ResponseEntity<List<DadosAssociadoDto>> getAssociados() {
-        List<DadosAssociadoDto> dadosAssociadoDtos = associadoUC.execute();
+        List<DadosAssociadoDto> dadosAssociadoDtos = associadoUC.getTodosAssociados();
         return ResponseEntity.ok(dadosAssociadoDtos);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<DadosAssociadoDto> getById(@PathVariable("id") String id) {
-        DadosAssociadoDto associadoDto = associadoUC.buscarAssociadoDados(id);
+        DadosAssociadoDto associadoDto = associadoUC.getAssociado(id);
         return ResponseEntity.ok(associadoDto);
     }
 
     @GetMapping("/complete/{id}")
     public ResponseEntity<AssociadoDTO> getByIdComplete(@PathVariable("id") String id) {
-        AssociadoDTO dto = associadoUC.buscarAssociadoCompleto(id);
+        AssociadoDTO dto = associadoUC.getAssociadoCompleto(id);
         return ResponseEntity.ok(dto);
     }
 
     @GetMapping("/consulta/{idConsultaMarcada}")
     public ResponseEntity<ConsultaDto> getConsulta(@PathVariable("idConsultaMarcada") Long idConsultaMarcada) {
-        ConsultaDto consulta = consultaUC.execute(idConsultaMarcada);
+        ConsultaDto consulta = consultaUC.getConsulta(idConsultaMarcada);
         return ResponseEntity.ok(consulta);
     }
 
     @GetMapping("/consulta/todas/{matricula}")
     public ResponseEntity<ConsultasDto> getConsultas(@PathVariable("matricula") String matricula) {
-        ConsultasDto dto = consultaUC.execute(matricula);
+        ConsultasDto dto = consultaUC.getConsultasByAssociado(matricula);
         return ResponseEntity.ok(dto);
     }
 }

@@ -17,7 +17,6 @@ import java.util.Optional;
 public class ConsultaPortImpl implements ConsultaPort {
     private final ConsultaRepository repository;
     private final ConsultaConverter converter;
-
     @Override
     public void execute(Consulta consulta) {
         repository.save(consulta);

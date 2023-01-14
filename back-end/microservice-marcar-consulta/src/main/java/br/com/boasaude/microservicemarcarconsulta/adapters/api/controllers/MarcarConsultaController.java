@@ -16,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("v1/api/marcar-consulta")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class MarcarConsultaController {
 
     private final MarcarNovaConsultaUC novaConsulta;

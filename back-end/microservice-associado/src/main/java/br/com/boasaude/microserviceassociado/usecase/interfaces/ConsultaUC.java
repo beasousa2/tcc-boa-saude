@@ -7,10 +7,9 @@ import org.springframework.stereotype.Component;
 @Component
 public interface ConsultaUC {
 
-    void execute(ConsultaDto consultaDto);
-    ConsultasDto execute(String id);
-
-    ConsultaDto execute(Long idConsultaMarcada);
+    void novaConsulta(ConsultaDto consultaDto);
+    ConsultasDto getConsultasByAssociado(String id);
+    ConsultaDto getConsulta(Long idConsultaMarcada);
 
 
 }

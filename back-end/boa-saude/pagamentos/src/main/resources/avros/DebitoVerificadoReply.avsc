@@ -1,0 +1,42 @@
+{
+  "namespace": "br.com.boasaude.pagamentos.debito_verificado_reply",
+  "name": "DebitoVerificadoReply",
+  "type": "record",
+  "fields": [{
+    "name": "data",
+    "type": {
+      "name": "DebitoVerificadoReplyData",
+      "type": "record",
+      "fields": [
+        {
+          "name": "codigo_associado",
+          "type": ["null", "string"],
+          "default": null
+        },
+        {
+          "name": "debitos_aberto",
+          "type": {
+            "type": "array",
+            "items": {
+              "name": "Pagamentos",
+              "type": "record",
+              "fields": [
+                {
+                  "name": "data_vencimento",
+                  "type": ["null", "string"],
+                  "default": null
+                },
+                {
+                  "name": "is_pago",
+                  "type": ["null", "boolean"],
+                  "default": null
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+  ]
+}

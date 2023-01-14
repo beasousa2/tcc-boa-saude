@@ -10,10 +10,9 @@ import java.util.List;
 @Component
 public interface AssociadoUC {
 
-    AssociadoDTO buscarAssociadoCompleto(String id);
-    DadosAssociadoDto buscarAssociadoDados(String id);
-    String execute(AssociadoForm form);
-
-    List<DadosAssociadoDto> execute();
+    AssociadoDTO getAssociadoCompleto(String id);
+    DadosAssociadoDto getAssociado(String id);
+    String salvar(AssociadoForm form);
+    List<DadosAssociadoDto> getTodosAssociados();
 
 }

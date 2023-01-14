@@ -39,5 +39,9 @@ export interface Associado {
   status: string;
 }
 
+export interface AssociadoAPI {
+  payload: Associado;
+}
+
 
 

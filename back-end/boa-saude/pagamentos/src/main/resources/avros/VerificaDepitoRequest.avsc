@@ -1,0 +1,19 @@
+{
+  "namespace": "br.com.boasaude.microservicemarcarconsulta.verifica_debito_request",
+  "name": "VerificaDebito",
+  "type": "record",
+  "fields": [{
+    "name": "data",
+    "type": {
+      "name": "VerificaDebitoData",
+      "type": "record",
+      "fields": [
+        {
+          "name": "codigo_associado",
+          "type": ["null", "string"],
+          "default": null
+        }
+      ]
+    }
+  }]
+}

@@ -1,0 +1,29 @@
+{
+  "namespace": "br.com.boasaude.microservicemarcarconsulta.verifica_cobertura_plano_request",
+  "name": "VerificaCoberturaPlano",
+  "type": "record",
+  "fields": [{
+    "name": "data",
+    "type": {
+      "name": "VerificaCoberturaPlanoData",
+      "type": "record",
+      "fields": [
+        {
+          "name": "associado_id",
+          "type": ["null", "string"],
+          "default": null
+        },
+        {
+          "name": "plano_id",
+          "type": ["null", "long"],
+          "default": null
+        },
+        {
+          "name": "procedimento",
+          "type": ["null", "string"],
+          "default": null
+        }
+      ]
+    }
+  }]
+}

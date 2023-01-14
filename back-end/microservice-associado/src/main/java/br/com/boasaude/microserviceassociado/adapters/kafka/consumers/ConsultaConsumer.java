@@ -2,12 +2,10 @@ package br.com.boasaude.microserviceassociado.adapters.kafka.consumers;
 
 import br.com.boasaude.microserviceassociado.adapters.kafka.converts.ConsultaConverterKafka;
 import br.com.boasaude.microserviceassociado.adapters.kafka.header.KafkaHeader;
-import br.com.boasaude.microserviceassociado.adapters.kafka.header.KafkaHeaderDto;
 import br.com.boasaude.microserviceassociado.dto.ConsultaDto;
 import br.com.boasaude.microserviceassociado.usecase.interfaces.ConsultaUC;
 import br.com.boasaude.microservicemarcarconsulta.marcar_nova_consulta_resposta.MarcarNovaConsultaResposta;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.messaging.handler.annotation.Header;
@@ -30,7 +28,7 @@ public class ConsultaConsumer {
                          final Acknowledgment ack) {
         System.out.println(payload.getData());
         ConsultaDto consultaDto = converter.converter(payload);
-        usecase.execute(consultaDto);
+        usecase.novaConsulta(consultaDto);
         ack.acknowledge();
     }
 }

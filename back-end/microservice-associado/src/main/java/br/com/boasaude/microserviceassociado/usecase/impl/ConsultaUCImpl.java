@@ -16,18 +16,18 @@ public class ConsultaUCImpl implements ConsultaUC {
     private final ConsultaConverter converter;
     private final ConsultaPort port;
     @Override
-    public void execute(ConsultaDto consultaDto) {
+    public void novaConsulta(ConsultaDto consultaDto) {
         Consulta consulta = converter.converter(consultaDto);
         port.execute(consulta);
     }
 
     @Override
-    public ConsultasDto execute(String matricula) {
+    public ConsultasDto getConsultasByAssociado(String matricula) {
         return port.execute(matricula);
     }
 
     @Override
-    public ConsultaDto execute(Long idConsultaMarcada) {
+    public ConsultaDto getConsulta(Long idConsultaMarcada) {
         return port.execute(idConsultaMarcada);
     }
 }

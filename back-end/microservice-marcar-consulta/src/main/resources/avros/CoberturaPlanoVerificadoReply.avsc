@@ -1,0 +1,29 @@
+{
+  "namespace": "br.com.boasaude.coberturaplano.cobertura_plano_verificado_reply",
+  "name": "CoberturaPlanoVerificado",
+  "type": "record",
+  "fields": [{
+    "name": "data",
+    "type": {
+      "name": "CoberturaPlanoVerificadoData",
+      "type": "record",
+      "fields": [
+        {
+          "name": "associado_id",
+          "type": ["null", "string"],
+          "default": null
+        },
+        {
+          "name": "plano_id",
+          "type": ["null", "long"],
+          "default": null
+        },
+        {
+          "name": "is_coberto",
+          "type": ["null", "boolean"],
+          "default": null
+        }
+      ]
+    }
+  }]
+}

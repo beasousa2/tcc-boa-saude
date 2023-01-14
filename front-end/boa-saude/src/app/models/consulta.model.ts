@@ -7,3 +7,11 @@ descricao: string;
 }
 
 export interface Consultas extends Array<Consulta>{}
+
+export interface ConsultasAPI {
+  payload: Consultas;
+}
+
+export interface ConsultaAPI {
+  payload: Consulta;
+}

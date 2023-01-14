@@ -12,8 +12,6 @@ import java.util.stream.Collectors;
 @Component
 public class ConsultaConverter {
 
-    private DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-
     public Consulta converter(ConsultaDto dto) {
         return Consulta.builder()
                 .idConsultaMarcada(dto.getId())
@@ -30,7 +28,7 @@ public class ConsultaConverter {
                 .id(consulta.getIdConsultaMarcada())
                 .codigoConveniado(consulta.getCodigoConveniado())
                 .codigoMedico(consulta.getCodigoMedico())
-                .dataHora(consulta.getDataHora())
+                .dataHora(consulta.getDataHora().plusHours(3))
                 .descricao(consulta.getDescricao())
                 .matriculaPaciente(consulta.getMatricula())
                 .build();
@@ -42,7 +40,7 @@ public class ConsultaConverter {
                         .matriculaPaciente(consulta.getMatricula())
                         .codigoMedico(consulta.getCodigoMedico())
                         .codigoConveniado(consulta.getCodigoConveniado())
-                        .dataHora(consulta.getDataHora())
+                        .dataHora(consulta.getDataHora().plusHours(3))
                         .descricao(consulta.getDescricao())
                         .id(consulta.getIdConsultaMarcada())
                         .build()).collect(Collectors.toList()))
