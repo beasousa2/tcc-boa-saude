@@ -1,19 +1,14 @@
 package br.com.boasaude.microservicemarcarconsulta.adapters.database.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 
 @Entity(name = "marcar_consulta")
-@Getter
+@Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class Consulta {
 
     @Id
@@ -27,6 +22,9 @@ public class Consulta {
     @Column(name = "matricula_paciente", nullable = false)
     private String matriculaPaciente;
 
+    @Column(name = "codigo_paciente", nullable = false)
+    private String codigoPaciente;
+
     @Column(name = "codigo_medico")
     private String codigoMedico;
 
@@ -35,6 +33,9 @@ public class Consulta {
 
     @Column(name = "descricao", nullable = false)
     private String descricao;
+
+    @Column(name = "procedimento", nullable = false)
+    private String procedimento;
 
     @Column(name = "concluida", nullable = false)
     private Boolean concluida;

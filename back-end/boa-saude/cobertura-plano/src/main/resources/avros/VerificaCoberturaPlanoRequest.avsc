@@ -19,6 +19,31 @@
           "default": null
         },
         {
+          "name": "matricula",
+          "type": ["null", "string"],
+          "default": null
+        },
+        {
+          "name": "codigo_medico",
+          "type": ["null", "string"],
+          "default": null
+        },
+        {
+          "name": "codigo_conveniado",
+          "type": ["null", "string"],
+          "default": null
+        },
+        {
+          "name": "data_hora",
+          "type": ["null", "string"],
+          "default": null
+        },
+        {
+          "name": "descricao",
+          "type": ["null", "string"],
+          "default": null
+        },
+        {
           "name": "procedimento",
           "type": ["null", "string"],
           "default": null

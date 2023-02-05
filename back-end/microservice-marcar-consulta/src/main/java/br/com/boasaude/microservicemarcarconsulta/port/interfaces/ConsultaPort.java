@@ -10,4 +10,5 @@ import java.util.List;
 public interface ConsultaPort {
 
     List<Consulta> execute();
+    Consulta execute(Consulta consulta);
 }

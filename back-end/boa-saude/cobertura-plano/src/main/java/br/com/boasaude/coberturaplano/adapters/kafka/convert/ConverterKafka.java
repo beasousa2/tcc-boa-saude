@@ -13,9 +13,13 @@ public class ConverterKafka {
     public VerificaCoberturaPlanoDto avroToDto(VerificaCoberturaPlano avro) {
         return VerificaCoberturaPlanoDto.builder()
                 .associadoId(avro.getData().getAssociadoId().toString())
-                .planoId(avro.getData().getPlanoId())
                 .procedimento(avro.getData().getProcedimento().toString())
                 .planoId(avro.getData().getPlanoId())
+                .codigoConveniado(avro.getData().getCodigoConveniado().toString())
+                .matricula(avro.getData().getMatricula().toString())
+                .codigoMedico(avro.getData().getCodigoMedico().toString())
+                .dataHora(avro.getData().getDataHora().toString())
+                .descricao(avro.getData().getDescricao().toString())
                 .build();
     }
 
@@ -25,6 +29,13 @@ public class ConverterKafka {
                         .setAssociadoId(dto.getAssociadoId())
                         .setIsCoberto(dto.getIsCoberto())
                         .setPlanoId(dto.getPlanoId())
+                        .setAssociadoId(dto.getAssociadoId())
+                        .setCodigoConveniado(dto.getCodigoConveniado())
+                        .setCodigoMedico(dto.getCodigoConveniado())
+                        .setDataHora(dto.getDataHora())
+                        .setDescricao(dto.getDescricao())
+                        .setMatricula(dto.getMatricula())
+                        .setProcedimento(dto.getProcedimento())
                         .build())
                 .build();
     }

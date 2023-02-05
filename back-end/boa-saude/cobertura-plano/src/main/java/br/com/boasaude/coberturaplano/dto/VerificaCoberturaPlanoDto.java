@@ -10,4 +10,10 @@ public class VerificaCoberturaPlanoDto {
     private String associadoId;
     private Long planoId;
     private String procedimento;
+    private String matricula;
+    private String dataHora;
+    private String codigoMedico;
+    private String codigoConveniado;
+    private String descricao;
+
 }

@@ -1,22 +1,7 @@
 package br.com.boasaude.microservicemarcarconsulta.port.impl;
 
-import br.com.boasaude.microservicemarcarconsulta.adapters.api.form.NovaConsultaForm;
-import br.com.boasaude.microservicemarcarconsulta.adapters.database.entity.Consulta;
-import br.com.boasaude.microservicemarcarconsulta.adapters.kafka.converters.MarcarNovaConsultaConverter;
-import br.com.boasaude.microservicemarcarconsulta.adapters.kafka.producers.MarcarNovaConsultaProducer;
-import br.com.boasaude.microservicemarcarconsulta.marcar_nova_consulta_resposta.MarcarNovaConsultaResposta;
-import br.com.boasaude.microservicemarcarconsulta.marcar_nova_consulta_resposta.MarcarNovaConsultaRespostaData;
-import br.com.boasaude.microservicemarcarconsulta.port.interfaces.MarcarNovaConsultaPort;
-import br.com.boasaude.microservicemarcarconsulta.usecase.impl.MarcarNovaConsultaUCImpl;
-import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
-
-import java.time.LocalDateTime;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
@@ -28,7 +13,7 @@ public class MarcarNovaConsultaPortImplTest {
 //    @Mock
 //    private MarcarNovaConsultaPort port;
 //    @Spy
-//    private MarcarNovaConsultaConverter converter;
+//    private ConverterKafka converter;
 //    @Mock
 //    private MarcarNovaConsultaProducer producer;
 //    @InjectMocks

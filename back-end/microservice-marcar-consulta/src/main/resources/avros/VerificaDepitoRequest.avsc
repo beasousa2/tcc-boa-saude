@@ -12,7 +12,13 @@
           "name": "codigo_associado",
           "type": ["null", "string"],
           "default": null
+        },
+        {
+          "name": "codigo_consulta",
+          "type": ["null", "long"],
+          "default": null
         }
+
       ]
     }
   }]

@@ -5,15 +5,17 @@ import br.com.boasaude.coberturaplano.adapters.kafka.header.KafkaHeaderDto;
 import br.com.boasaude.coberturaplano.cobertura_plano_verificado_reply.CoberturaPlanoVerificado;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 
-@Component
+@Service
 @RequiredArgsConstructor
 public class CoberturaPlanoVerificadoProducer {
 
     private final KafkaTemplate<String, Object> kafkaTemplate;
+    @Value("${spring.kafka.producer.cobertura-plano.topic}")
     private String topico;
     private final KafkaHeader kafkaHeader;
 
